@@ -3,7 +3,7 @@ id: home
 blueprint: page_with_hero
 title: Home
 updated_by: 075692b5-b33a-4310-a2bb-73666e5899c1
-updated_at: 1709663976
+updated_at: 1709665649
 subtitle: 'This is the homepage'
 hero_title: StataRocket
 hero_subtitle: 'A Starter Kit for Statamic'
@@ -13,6 +13,9 @@ button_1_text: Primary
 button_1_link: '#'
 button_2_text: Secondary
 button_2_link: '#'
+seo:
+  title: 'A Starter Kit for Statamic'
+  site_name_position: before
 content:
   -
     type: set

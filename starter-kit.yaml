@@ -4,6 +4,7 @@ export_paths:
   - content/navigation
   - content/taxonomies
   - content/trees
+  - content/seo.yaml
   - public/assets
   - resources/blueprints/collections
   - resources/blueprints/forms
