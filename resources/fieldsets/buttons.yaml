@@ -1,0 +1,76 @@
+title: Buttons
+fields:
+  -
+    handle: button_1
+    field:
+      type: section
+      display: 'Button #1'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: button_1_text
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Text
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: button_1_link
+    field:
+      collections:
+        - pages
+      container: assets
+      type: link
+      display: Link
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: button_2
+    field:
+      type: section
+      display: 'Button #2'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: button_2_text
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Text
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: button_2_link
+    field:
+      collections:
+        - pages
+      container: assets
+      type: link
+      display: Link
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

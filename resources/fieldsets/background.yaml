@@ -1,0 +1,30 @@
+title: Background
+fields:
+  -
+    handle: background_color
+    field:
+      options:
+        bg-blue-50: Blue
+        bg-gray-100: Gray
+        bg-green-50: Green
+        bg-orange-50: Orange
+        bg-pink-50: Pink
+        bg-red-50: Red
+        bg-sky-50: Sky
+        bg-slate-100: Slate
+        bg-white: White
+        bg-yellow-50: Yellow
+      taggable: false
+      push_tags: false
+      multiple: false
+      max_items: 1
+      clearable: true
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: 'Background color'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

@@ -1,12 +1,17 @@
 export_paths:
   - content/collections/pages.yaml
-  - public/assets/icons
-  - resources/blueprints/collections/pages/page.yaml
-  - resources/blueprints/forms/contact_form.yaml
-  - resources/blueprints/globals/settings.yaml
+  - content/globals
+  - content/navigation
+  - content/taxonomies
+  - content/trees
+  - public/assets
+  - resources/blueprints/collections
+  - resources/blueprints/forms
+  - resources/blueprints/globals
   - resources/css/site.css
-  - resources/fieldsets/bard.yaml
-  - resources/forms/contact_form.yaml
+  - resources/fieldsets
+  - resources/fonts
+  - resources/forms
   - resources/js/site.js
   - resources/views
   - .editorconfig

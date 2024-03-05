@@ -1,0 +1,45 @@
+{{ if not_global }}
+    {{ if social_links }}
+        <!-- Social Media -->
+        <div
+            class="{{ if class }} {{ class }} {{ else }} flex items-center justify-center gap-x-4 py-4 {{ /if }}"
+        >
+            {{ social_links }}
+                <a
+                    class="{{ if class_items }} {{ class_items }} {{ else }} {{ icon:icon_color }} {{ /if }}"
+                    href="{{ link }}"
+                    target="_blank"
+                >
+                    <span class="sr-only">{{ title }}</span>
+                    {{ svg :src="icon" class="h-4 w-4" }}
+                </a>
+            {{ /social_links }}
+        </div>
+    {{ /if }}
+{{ elseif settings:social_links or settings:rss_feed }}
+    <!-- Social Media -->
+    <div
+        class="{{ if class }} {{ class }} {{ else }} flex items-center justify-center gap-x-4 py-4 {{ /if }}"
+    >
+        {{ settings:social_links }}
+            <a
+                class="{{ if class_items }} {{ class_items }} {{ else }} {{ icon:icon_color }} {{ /if }}"
+                href="{{ link }}"
+                target="_blank"
+            >
+                <span class="sr-only">{{ title }}</span>
+                {{ svg :src="icon" class="h-4 w-4" }}
+            </a>
+        {{ /settings:social_links }}
+        {{ if settings:rss_feed }}
+            <a
+                class="{{ if class_items }} {{ class_items }} {{ else }} {{ icon:icon_color }} {{ /if }}"
+                href="{{ site:permalink }}{{ settings:rss_feed }}"
+                target="_blank"
+            >
+                <span class="sr-only">RSS-Feed</span>
+                {{ svg src="assets/icons/solid/rss" class="h-4 w-4" }}
+            </a>
+        {{ /if }}
+    </div>
+{{ /if }}

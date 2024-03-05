@@ -1,0 +1,34 @@
+title: Markdown
+fields:
+  -
+    handle: markdown
+    field:
+      container: assets
+      restrict: false
+      buttons:
+        - bold
+        - italic
+        - strikethrough
+        - unorderedlist
+        - orderedlist
+        - quote
+        - table
+        - image
+        - asset
+        - link
+        - code
+        - codeblock
+      automatic_line_breaks: true
+      automatic_links: true
+      escape_markup: false
+      heading_anchors: false
+      smartypants: true
+      table_of_contents: false
+      antlers: true
+      type: markdown
+      display: Markdown
+      listable: false
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

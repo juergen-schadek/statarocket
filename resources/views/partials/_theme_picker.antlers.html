@@ -1,0 +1,88 @@
+<!-- Theme picker -->
+<div class="relative">
+    <label class="sr-only">Theme</label>
+    <button
+        @click="themePickerOpen = ! themePickerOpen"
+        role="button"
+        class="flex h-6 w-6 items-center justify-center rounded-lg bg-themepicker-icon-bg shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-dark-themepicker-icon-bg dark:ring-inset dark:ring-white/5"
+        :aria-expanded="themePickerOpen"
+    >
+        <span
+            :class="themePreference != 'system' ? 'fill-primary' : 'fill-themepicker-icon'"
+            aria-hidden="true"
+        >
+            {{ svg src="assets/icons/light-mode" class="h-4 w-4 dark:hidden" }}
+        </span>
+        <span
+            :class="themePreference != 'system' ? 'fill-primary' : 'fill-themepicker-icon'"
+            aria-hidden="true"
+        >
+            {{ svg src="assets/icons/dark-mode" class="hidden h-4 w-4 dark:block" }}
+        </span>
+    </button>
+    <ul
+        x-cloak
+        x-show="themePickerOpen"
+        @click.outside="themePickerOpen = false"
+        @keydown.escape="themePickerOpen = false"
+        x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="opacity-0 translate-y-1"
+        x-transition:enter-end="opacity-100 translate-y-0"
+        x-transition:leave="transition ease-in duration-150"
+        x-transition:leave-start="opacity-100 translate-y-0"
+        x-transition:leave-end="opacity-0 translate-y-1"
+        class="absolute right-0 top-full z-10 mt-3 w-36 space-y-1 rounded-xl bg-themepicker-bg p-3 text-sm font-medium shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-dark-themepicker-bg dark:ring-white/5"
+    >
+        <li
+            @click="setThemePreference('light'); themePickerOpen = false"
+            class="flex cursor-pointer select-none items-center rounded-[0.625rem] p-1 hover:bg-themepicker-text-bg-hover dark:bg-transparent dark:text-submenu-inverted hover:dark:bg-dark-themepicker-text-bg-hover"
+            :class="themePreference != 'system' ? 'text-primary' : 'text-submenu'"
+        >
+            <div
+                class="rounded-md bg-themepicker-bg p-1 shadow ring-1 ring-slate-900/5 dark:bg-dark-themepicker-icon-bg dark:ring-inset dark:ring-white/5"
+            >
+                <span
+                    :class="themePreference != 'system' ? 'fill-primary' : 'fill-themepicker-icon'"
+                    aria-hidden="true"
+                >
+                    {{ svg src="assets/icons/light-mode" class="h-4 w-4 dark:fill-themepicker-icon" }}
+                </span>
+            </div>
+            <div class="ml-3">Light</div>
+        </li>
+        <li
+            @click="setThemePreference('dark'); themePickerOpen = false"
+            class="flex cursor-pointer select-none items-center rounded-[0.625rem] p-1 text-submenu hover:bg-themepicker-text-bg-hover hover:dark:bg-dark-themepicker-text-bg-hover"
+            :class="themePreference != 'system' ? 'dark:text-primary dark:bg-dark-themepicker-text-bg-hover/40' : 'dark:text-submenu-inverted'"
+        >
+            <div
+                class="rounded-md bg-themepicker-bg p-1 shadow ring-1 ring-slate-900/5 dark:bg-dark-themepicker-icon-bg dark:ring-inset dark:ring-white/5"
+            >
+                <span
+                    :class="themePreference != 'system' ? 'fill-slate-400 dark:fill-primary' : 'fill-slate-400'"
+                    aria-hidden="true"
+                >
+                    {{ svg src="assets/icons/dark-mode" class="h-4 w-4" }}
+                </span>
+            </div>
+            <div class="ml-3">Dark</div>
+        </li>
+        <li
+            @click="setThemePreference('system'); themePickerOpen = false"
+            class="flex cursor-pointer select-none items-center rounded-[0.625rem] p-1 hover:bg-themepicker-text-bg-hover hover:dark:bg-dark-themepicker-text-bg-hover"
+            :class="themePreference == 'system' ? 'text-primary dark:bg-slate-900/40' : 'text-submenu dark:text-submenu-inverted'"
+        >
+            <div
+                class="rounded-md bg-themepicker-bg p-1 shadow ring-1 ring-slate-900/5 dark:bg-dark-themepicker-icon-bg dark:ring-inset dark:ring-white/5"
+            >
+                <span
+                    :class="themePreference == 'system' ? 'fill-primary' : 'fill-slate-400'"
+                    aria-hidden="true"
+                >
+                    {{ svg src="assets/icons/system-mode" class="h-4 w-4" }}
+                </span>
+            </div>
+            <div class="ml-3">System</div>
+        </li>
+    </ul>
+</div>

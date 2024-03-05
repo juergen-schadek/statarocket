@@ -1,0 +1,68 @@
+title: 'Social Links'
+fields:
+  -
+    handle: social_links
+    field:
+      fields:
+        -
+          handle: title
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Title
+            width: 25
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+        -
+          handle: link
+          field:
+            input_type: url
+            antlers: false
+            type: text
+            display: Link
+            width: 50
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+        -
+          handle: icon
+          field:
+            max_files: 1
+            mode: list
+            container: assets
+            folder: icons
+            restrict: true
+            allow_uploads: false
+            show_filename: false
+            show_set_alt: false
+            type: assets
+            display: Icon
+            width: 25
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+      mode: table
+      add_row: 'Add link'
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: 'Social Links'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
