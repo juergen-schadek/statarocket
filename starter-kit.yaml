@@ -8,5 +8,6 @@ export_paths:
   - resources/views/layout.antlers.html
   - tailwind.config.js
   - resources/js/site.js
+  - resources/blueprints/globals/settings.yaml
 dependencies:
   statamic/seo-pro: ^5.4

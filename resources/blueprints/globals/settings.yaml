@@ -1,0 +1,123 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: General
+        fields:
+          -
+            handle: site_title
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Site title'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: site_description
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Site description'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: site_logo
+            field:
+              max_files: 1
+              mode: grid
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Site logo'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: site_author
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Site author'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: copyright
+            field:
+              antlers: true
+              type: textarea
+              display: Copyright
+              listable: false
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
+        display: Meta-Informations
+        fields:
+          -
+            handle: meta_informations_icons
+            field:
+              antlers: false
+              type: textarea
+              display: Icons
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: meta_informations_cookie_banner
+            field:
+              antlers: false
+              type: textarea
+              display: Cookie-Banner
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: meta_informations_google_analytics
+            field:
+              antlers: false
+              type: textarea
+              display: 'Google Analytics'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: meta_informations_rss_feed
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: RSS-Feed
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
