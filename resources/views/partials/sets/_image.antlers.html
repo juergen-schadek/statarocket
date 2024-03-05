@@ -1,0 +1,11 @@
+<figure>
+    <img
+        class="aspect-video rounded-xl bg-element object-cover dark:bg-dark-element"
+        src="{{ glide :src="image" w="900" fit="max" }}"
+        alt="{{ image:alt }}"
+    />
+    <figcaption class="mt-4 flex gap-x-2 text-sm leading-6 text-text-muted">
+        {{ svg src="/assets/icons/outline/information-circle" class="mt-0.5 flex-none h-5 w-5 text-text-muted" }}
+        {{ image:alt }}
+    </figcaption>
+</figure>

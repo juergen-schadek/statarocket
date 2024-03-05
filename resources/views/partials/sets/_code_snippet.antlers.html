@@ -1,0 +1,9 @@
+{{ code_snippet }}
+    {{ if mode == "htmlmixed" }}
+        <pre class="language-html"><code>{{ code | entities }}</code></pre>
+    {{ else }}
+        <pre class="language-{{ mode }}">
+            <code>{{ code | entities }}</code>
+        </pre>
+    {{ /if }}
+{{ /code_snippet }}

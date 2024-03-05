@@ -1,0 +1,30 @@
+<div class="mb-12 space-y-4">
+    {{ if heading_1 }}
+        <h2
+            id="gallery"
+            class="anchor text-2xl font-bold tracking-tight text-heading dark:text-heading-inverted sm:text-3xl lg:text-4xl"
+        >
+            {{ heading_1 }}
+        </h2>
+    {{ /if }}
+    {{ if description }}
+        <div
+            class="{{ settings:typography }} prose max-w-4xl text-justify dark:prose-invert"
+        >
+            {{ description }}
+        </div>
+    {{ /if }}
+</div>
+<div class="grid gap-4 md:grid-cols-2 md:gap-8">
+    {{ images }}
+        <div
+            class="{{ if col_span == 2 }} col-span-2 {{ elseif col_span == 3 }} col-span-3 {{ /if }}"
+        >
+            <img
+                class="mx-auto h-28 w-auto"
+                src="{{ glide :src="image" h="120" }}"
+                alt="{{ image:alt }}"
+            />
+        </div>
+    {{ /images }}
+</div>

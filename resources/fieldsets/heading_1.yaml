@@ -1,0 +1,14 @@
+title: 'Heading 1'
+fields:
+  -
+    handle: heading_1
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Heading 1'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

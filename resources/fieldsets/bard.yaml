@@ -62,6 +62,172 @@ fields:
           instructions: null
           icon: null
           sets:
+            bullet_points:
+              display: 'Bullet points'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: background_color
+                  field: background.background_color
+                -
+                  handle: heading_1
+                  field: heading_1.heading_1
+                -
+                  handle: description
+                  field: markdown.markdown
+                  config:
+                    display: Description
+                -
+                  handle: bullet_points
+                  field:
+                    type: list
+                    display: 'Bullet points'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    validate:
+                      - required
+            call_to_action:
+              display: 'Call to action'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: background_color
+                  field: background.background_color
+                -
+                  handle: heading_1
+                  field: heading_1.heading_1
+                -
+                  import: buttons
+            code_snippet:
+              display: 'Code snippet'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: code_snippet
+                  field:
+                    theme: material
+                    mode: htmlmixed
+                    mode_selectable: true
+                    indent_type: tabs
+                    indent_size: 4
+                    key_map: default
+                    line_numbers: true
+                    line_wrapping: true
+                    antlers: false
+                    type: code
+                    display: 'Code snippet'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    validate:
+                      - required
+            gallery:
+              display: Gallery
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: background_color
+                  field: background.background_color
+                -
+                  handle: heading_1
+                  field: heading_1.heading_1
+                -
+                  handle: description
+                  field: markdown.markdown
+                  config:
+                    display: Description
+                -
+                  handle: images
+                  field:
+                    collapse: false
+                    previews: true
+                    fullscreen: true
+                    sets:
+                      images:
+                        display: Images
+                        instructions: null
+                        icon: null
+                        sets:
+                          image:
+                            display: Image
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                handle: image
+                                field:
+                                  max_files: 1
+                                  mode: grid
+                                  container: assets
+                                  restrict: false
+                                  allow_uploads: true
+                                  show_filename: true
+                                  show_set_alt: true
+                                  type: assets
+                                  display: Image
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  validate:
+                                    - required
+                              -
+                                handle: col_span
+                                field:
+                                  default: '1'
+                                  type: integer
+                                  display: 'Column span'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  validate:
+                                    - required
+                    type: replicator
+                    display: Images
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    validate:
+                      - required
+            image:
+              display: Image
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    min_files: 1
+                    mode: grid
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: Image
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    validate:
+                      - required
             markdown:
               display: Markdown
               instructions: null
@@ -73,3 +239,119 @@ fields:
                 -
                   handle: markdown
                   field: markdown.markdown
+            skill_bar:
+              display: 'Skill bar'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: background_color
+                  field: background.background_color
+                -
+                  handle: heading_1
+                  field: heading_1.heading_1
+                -
+                  handle: description
+                  field: markdown.markdown
+                  config:
+                    display: Description
+                -
+                  handle: skills
+                  field:
+                    collapse: false
+                    previews: true
+                    fullscreen: true
+                    sets:
+                      skills:
+                        display: Skills
+                        instructions: null
+                        icon: null
+                        sets:
+                          skill:
+                            display: Skill
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                handle: skill
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: Skill
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  validate:
+                                    - required
+                              -
+                                handle: level
+                                field:
+                                  type: integer
+                                  display: Level
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  validate:
+                                    - required
+                              -
+                                handle: font_color
+                                field:
+                                  input_type: text
+                                  prepend: text-
+                                  append: '-600'
+                                  antlers: false
+                                  type: text
+                                  display: 'Font color'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  validate:
+                                    - required
+                              -
+                                handle: font_background
+                                field:
+                                  input_type: text
+                                  prepend: bg-
+                                  append: '-200'
+                                  antlers: false
+                                  type: text
+                                  display: 'Font background'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  validate:
+                                    - required
+                              -
+                                handle: bar_background
+                                field:
+                                  input_type: text
+                                  prepend: bg-
+                                  append: '-500'
+                                  antlers: false
+                                  type: text
+                                  display: 'Bar background'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  validate:
+                                    - required
+                    type: replicator
+                    display: Skills
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    validate:
+                      - required

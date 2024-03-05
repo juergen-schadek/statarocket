@@ -1,0 +1,29 @@
+<div class="md:flex md:items-center md:justify-between">
+    <h3
+        class="text-xl font-semibold tracking-tight text-heading dark:text-heading-inverted sm:text-2xl lg:text-3xl"
+    >
+        {{ heading_1 }}
+    </h3>
+    <!-- Buttons -->
+    {{ if button_1_link or button_2_link }}
+        <div class="mt-10 flex items-center gap-x-6 md:mt-0 md:flex-shrink-0">
+            {{ if button_1_link }}
+                <a
+                    class="flex items-center justify-center rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-heading-inverted shadow-sm hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    href="{{ button_1_link }}"
+                >
+                    {{ button_1_text }}
+                </a>
+            {{ /if }}
+            {{ if button_2_link }}
+                <a
+                    class="text-sm font-semibold leading-6 text-heading dark:text-heading-inverted"
+                    href="{{ button_2_link }}"
+                >
+                    {{ button_2_text }}
+                    <span aria-hidden="true">→</span>
+                </a>
+            {{ /if }}
+        </div>
+    {{ /if }}
+</div>
