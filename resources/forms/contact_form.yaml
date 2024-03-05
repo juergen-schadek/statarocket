@@ -1,0 +1,8 @@
+title: 'Contact Form'
+honeypot: check_privacy
+email:
+  -
+    id: ltel90dd
+    to: test@test.com
+    reply_to: '{{ email }}'
+    subject: 'New message from StataRocket'

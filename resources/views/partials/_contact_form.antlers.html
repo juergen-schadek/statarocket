@@ -1,0 +1,132 @@
+<aside class="container mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+    {{ if settings:footer_contact_form_title ||
+    settings:footer_contact_form_description }}
+    <div class="mx-auto max-w-lg">
+        <div class="space-y-4 text-center sm:space-y-5">
+            {{ if settings:footer_contact_form_title }}
+            <h2
+                id="contact"
+                class="anchor text-3xl font-bold tracking-tight text-heading dark:text-heading-inverted sm:text-4xl lg:text-5xl"
+            >
+                {{ settings:footer_contact_form_title }}
+            </h2>
+            {{ /if }} {{ if settings:footer_contact_form_description }}
+            <p class="text-xl">
+                {{ settings:footer_contact_form_description }}
+            </p>
+            {{ /if }}
+        </div>
+    </div>
+    {{ /if }}
+    <div class="mx-auto mt-4 max-w-xl sm:mt-5">
+        {{ form:create formset="contact_form" }}
+        <div class="space-y-4 sm:space-y-5">
+            {{ if success }}
+            <div class="rounded-md bg-green-300 p-2 font-semibold text-text">
+                {{ success }}
+            </div>
+            {{ else }} {{ if errors }}
+            <div class="rounded-md bg-red-300 p-2 font-semibold text-text">
+                {{ errors }} {{ value }}
+                <br />
+                {{ /errors }}
+            </div>
+            {{ /if }}
+            <div>
+                <label
+                    for="name"
+                    class="block text-sm font-semibold text-text-muted"
+                >
+                    Name
+                </label>
+                <div class="mt-2.5">
+                    <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        autocomplete="name"
+                        value="{{ old:name }}"
+                        class="block w-full rounded-md border-0 px-3.5 py-2 text-text shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-text-muted focus:ring-2 focus:ring-inset focus:ring-primary dark:bg-dark-element"
+                    />
+                </div>
+            </div>
+            <div>
+                <label
+                    for="email"
+                    class="block text-sm font-semibold text-text-muted"
+                >
+                    E-Mail
+                </label>
+                <div class="mt-2.5">
+                    <input
+                        type="text"
+                        name="email"
+                        id="email"
+                        autocomplete="email"
+                        value="{{ old:email }}"
+                        class="block w-full rounded-md border-0 px-3.5 py-2 text-text shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-text-muted focus:ring-2 focus:ring-inset focus:ring-primary dark:bg-dark-element"
+                    />
+                </div>
+            </div>
+            <div>
+                <label
+                    for="comment"
+                    class="block text-sm font-semibold text-text-muted"
+                >
+                    Message
+                </label>
+                <div class="mt-2.5">
+                    <textarea
+                        name="comment"
+                        id="comment"
+                        rows="4"
+                        class="block w-full rounded-md border-0 px-3.5 py-2 text-text shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-text-muted focus:ring-2 focus:ring-inset focus:ring-primary dark:bg-dark-element"
+                    >
+                                {{ old:comment }}
+                            </textarea
+                    >
+                </div>
+            </div>
+            <div>
+                <div class="flex gap-x-4">
+                    <div class="flex items-center">
+                        <input
+                            type="checkbox"
+                            name="privacy"
+                            id="privacy"
+                            class="h-4 w-4 rounded border-0 text-text shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-primary dark:bg-dark-element"
+                        />
+                    </div>
+                    <label class="font-semibold text-text-muted">
+                        I have read the
+                        <a
+                            class="font-medium underline"
+                            href="/privacy-policy"
+                            target="_blank"
+                        >
+                            Privacy Policy
+                        </a>
+                        and agree with it.
+                    </label>
+                </div>
+            </div>
+            <input
+                type="text"
+                name="check_privacy"
+                id="check_privacy"
+                class="check_privacy"
+            />
+            <div class="mt-6 sm:mt-8">
+                <button
+                    type="submit"
+                    class="flex w-full items-center justify-center rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-heading-inverted shadow-sm hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                >
+                    Send {{ svg src="assets/icons/solid/arrow-long-right"
+                    class="ml-3 h-5 5 w-5" }}
+                </button>
+            </div>
+            {{ /if }}
+        </div>
+        {{ /form:create }}
+    </div>
+</aside>
