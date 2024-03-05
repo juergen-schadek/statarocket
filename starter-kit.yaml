@@ -1,5 +1,6 @@
 export_paths:
   - content/collections/pages.yaml
+  - public/assets/icons
   - resources/blueprints/collections/pages/page.yaml
   - resources/blueprints/globals/settings.yaml
   - resources/css/site.css
