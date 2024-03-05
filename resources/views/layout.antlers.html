@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html
+    x-data="htmlData()"
+    x-init="window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => setSystemTheme(e.matches ? 'dark' : 'light'))"
+    class="h-full scroll-smooth"
+    :class="{ dark: darkMode }"
+    lang="{{ site:short_locale }}"
+>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+        />
+
+        <!-- META-Informations -->
+        {{ seo_pro:meta }}
+        {{ if settings:meta_informations_icons }}
+            <!-- Icons -->
+            {{ settings:meta_informations_icons }}
+        {{ /if }}
+        {{ if settings:rss_feed }}
+            <!-- RSS-Feed -->
+            <link
+                rel="alternate"
+                type="application/atom+xml"
+                title="{{ settings:site_title }}"
+                href="{{ site:permalink }}{{ settings:rss_feed }}"
+            />
+        {{ /if }}
+        <!-- Tailwind CSS & Alpine.js -->
+        {{ vite src="resources/js/site.js|resources/css/site.css" }}
+        {{ if settings:meta_informations_cookie_banner }}
+            <!-- Cookie-Banner -->
+            {{ settings:meta_informations_cookie_banner }}
+        {{ /if }}
+        {{ if settings:meta_informations_google_analytics }}
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            {{ settings:meta_informations_google_analytics }}
+        {{ /if }}
+    </head>
+
+    <body
+        class="{{ settings:theme }} bg-body text-text dark:bg-dark-body dark:text-text-inverted h-full"
+    >
+        {{ template_content }}
+    </body>
+</html>

@@ -5,5 +5,8 @@ export_paths:
   - content/collections/pages.yaml
   - resources/blueprints/collections/pages/page.yaml
   - resources/fieldsets/bard.yaml
+  - resources/views/layout.antlers.html
+  - tailwind.config.js
+  - resources/js/site.js
 dependencies:
   statamic/seo-pro: ^5.4
