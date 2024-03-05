@@ -56,3 +56,20 @@ fields:
       visibility: visible
       replicator_preview: true
       hide_display: false
+      sets:
+        main:
+          display: Main
+          instructions: null
+          icon: null
+          sets:
+            markdown:
+              display: Markdown
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: background_color
+                  field: background.background_color
+                -
+                  handle: markdown
+                  field: markdown.markdown

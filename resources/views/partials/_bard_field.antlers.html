@@ -1,0 +1,23 @@
+{{ content }}
+    <section class="{{ background_color }}">
+        <div
+            class="{{ if class }} {{ class }} {{ else }} container mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 {{ /if }}"
+        >
+            {{ if type == "text" }}
+                <div
+                    class="{{ settings:typography }} prose max-w-screen-lg dark:prose-invert"
+                >
+                    {{ text }}
+                </div>
+            {{ elseif type == "markdown" }}
+                <div
+                    class="{{ settings:typography }} prose max-w-screen-lg dark:prose-invert"
+                >
+                    {{ markdown }}
+                </div>
+            {{ else }}
+                {{ partial src="sets/{type}" }}
+            {{ /if }}
+        </div>
+    </section>
+{{ /content }}
