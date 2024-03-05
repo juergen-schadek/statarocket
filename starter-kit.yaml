@@ -1,5 +1,5 @@
 export_paths:
-  - content/collections/pages.yaml
+  - content/collections
   - content/globals
   - content/navigation
   - content/taxonomies
