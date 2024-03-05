@@ -10,12 +10,12 @@
         >
             <!-- Top Bar -->
             <div
-                class="{{ settings:top_bar_text ? "justify-between" : "justify-end" }} flex items-center py-2"
+                class="{{ settings:header_top_bar_text ? "justify-between" : "justify-end" }} flex items-center py-2"
             >
-                {{ if settings:top_bar_text }}
+                {{ if settings:header_top_bar_text }}
                     <!-- Top Bar: Text -->
                     <div class="text-sm text-menu dark:text-menu-inverted">
-                        {{ settings:top_bar_text }}
+                        {{ settings:header_top_bar_text }}
                     </div>
                 {{ /if }}
                 <!-- Top Bar: Social Media & Theme picker -->
@@ -170,12 +170,12 @@
                         <div>
                             <!-- Top Bar -->
                             <div class="flex items-center justify-between py-2">
-                                {{ if settings:top_bar_text }}
+                                {{ if settings:header_top_bar_text }}
                                     <!-- Top Bar: Text -->
                                     <div
                                         class="text-sm text-submenu dark:text-submenu-inverted sm:hidden"
                                     >
-                                        {{ settings:top_bar_text }}
+                                        {{ settings:header_top_bar_text }}
                                     </div>
                                 {{ /if }}
                                 <!-- Gap Top Bar -->

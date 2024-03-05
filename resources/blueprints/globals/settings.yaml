@@ -190,7 +190,7 @@ tabs:
               replicator_preview: true
               hide_display: false
           -
-            handle: top_bar
+            handle: header_top_bar
             field:
               type: section
               display: 'Top Bar'
@@ -200,7 +200,7 @@ tabs:
               replicator_preview: true
               hide_display: false
           -
-            handle: top_bar_text
+            handle: header_top_bar_text
             field:
               input_type: text
               antlers: true
@@ -213,3 +213,41 @@ tabs:
               hide_display: false
           -
             import: buttons
+  footer:
+    display: Footer
+    sections:
+      -
+        fields:
+          -
+            handle: contact_form
+            field:
+              type: section
+              display: 'Contact Form'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: footer_contact_form_title
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Title
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: footer_contact_form_description
+            field:
+              antlers: true
+              type: textarea
+              display: Description
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
