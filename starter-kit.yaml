@@ -2,6 +2,7 @@ export_paths:
   - content/collections/pages.yaml
   - resources/blueprints/collections/pages/page.yaml
   - resources/blueprints/globals/settings.yaml
+  - resources/css/site.css
   - resources/fieldsets/bard.yaml
   - resources/js/site.js
   - resources/views
