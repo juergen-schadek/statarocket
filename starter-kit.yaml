@@ -1,5 +1,6 @@
 export_paths:
   - package.json
   - .prettierrc
+  - .editorconfig
 dependencies:
   statamic/seo-pro: ^5.4
