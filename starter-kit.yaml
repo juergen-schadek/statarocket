@@ -1,13 +1,13 @@
 export_paths:
-  - package.json
-  - .prettierrc
-  - .editorconfig
   - content/collections/pages.yaml
   - resources/blueprints/collections/pages/page.yaml
-  - resources/fieldsets/bard.yaml
-  - resources/views/layout.antlers.html
-  - tailwind.config.js
-  - resources/js/site.js
   - resources/blueprints/globals/settings.yaml
+  - resources/fieldsets/bard.yaml
+  - resources/js/site.js
+  - resources/views
+  - .editorconfig
+  - .prettierrc
+  - package.json
+  - tailwind.config.js
 dependencies:
   statamic/seo-pro: ^5.4
