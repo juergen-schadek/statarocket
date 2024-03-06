@@ -3,7 +3,7 @@ id: 23fb9a54-34c2-491f-b70c-ff959685cf05
 blueprint: page
 title: 'Bard Sets'
 updated_by: 075692b5-b33a-4310-a2bb-73666e5899c1
-updated_at: 1709713561
+updated_at: 1709716826
 subtitle: 'Demo of the Bard Sets'
 content:
   -
@@ -161,7 +161,7 @@ content:
             position: CEO
             type: job
             enabled: true
-            link: '#'
+            link: 'entry::80e6de27-a15e-440b-8b18-c106884a8e89'
           -
             id: ltff0swd
             logo: icons/facebook.svg
@@ -169,7 +169,7 @@ content:
             position: CTO
             type: job
             enabled: true
-            link: '#'
+            link: 'entry::91179876-da3d-4671-88d3-abe67068842e'
   -
     type: set
     attrs:
@@ -296,7 +296,7 @@ content:
             slogan_branch: 'We delete everything'
             position: CTO
             time: '2019 - today'
-            link: '#'
+            link: 'entry::02ceaf38-f637-4367-85d9-ca769d113101'
             type: entry
             enabled: true
           -
@@ -306,7 +306,7 @@ content:
             slogan_branch: 'We archive everything'
             position: CFO
             time: '2015 - 2019'
-            link: '#'
+            link: 'entry::23bdd3f1-0e5f-4ce5-9a6b-2a9fec313249'
             type: entry
             enabled: true
   -

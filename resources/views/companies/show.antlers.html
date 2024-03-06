@@ -8,8 +8,8 @@
                 <div
                     class="{{ background_color ?? "bg-element" }} flex h-72 items-center justify-center overflow-hidden rounded-lg px-4 py-6 shadow dark:bg-dark-element sm:px-6 sm:py-8 lg:px-8 lg:py-10"
                 >
-                    {{ if logo }}
-                        {{ svg class="mx-auto h-48 w-auto md:h-56" :src="logo" :alt="logo:alt" }}
+                    {{ if featured_image }}
+                        {{ svg class="mx-auto h-48 w-auto md:h-56" :src="featured_image" :alt="featured_image:alt" }}
                     {{ else }}
                         {{ svg class="mx-auto h-48 w-48 text-primary md:h-56 md:w-56" src="/assets/icons/outline/building-office" }}
                     {{ /if }}
@@ -52,14 +52,14 @@
                                 <div
                                     class="relative rounded-lg bg-element px-8 py-10 text-center shadow dark:bg-dark-element"
                                 >
-                                    {{ if avatar }}
+                                    {{ if featured_image }}
                                         <div
                                             class="relative mx-auto h-48 w-48 overflow-hidden rounded-full md:h-56 md:w-56"
                                         >
                                             <div class="absolute inset-0">
                                                 <img
-                                                    src="{{ glide:avatar width="225" height="225" }}"
-                                                    alt="{{ avatar:alt }}"
+                                                    src="{{ glide:featured_image width="225" height="225" }}"
+                                                    alt="{{ featured_image:alt }}"
                                                 />
                                                 <div
                                                     class="absolute inset-0 bg-image-blend mix-blend-multiply dark:bg-dark-image-blend"

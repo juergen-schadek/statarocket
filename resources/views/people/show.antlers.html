@@ -8,11 +8,11 @@
                 <div
                     class="flex h-72 items-center justify-center overflow-hidden rounded-lg bg-element px-4 py-6 shadow dark:bg-dark-element sm:px-6 sm:py-8 lg:px-8 lg:py-10"
                 >
-                    {{ if avatar }}
+                    {{ if featured_image }}
                         <img
                             class="mx-auto h-48 w-48 rounded-full md:h-56 md:w-56"
-                            src="{{ glide:avatar width="225" height="225" }}"
-                            alt="{{ avatar:alt }}"
+                            src="{{ glide:featured_image width="225" height="225" }}"
+                            alt="{{ featured_image:alt }}"
                         />
                     {{ else }}
                         {{ svg class="mx-auto h-48 w-48 text-primary md:h-56 md:w-56" src="/assets/icons/outline/user" }}
@@ -37,9 +37,9 @@
                             <div
                                 class="relative flex items-center space-x-3 rounded-lg border border-slate-300 bg-element px-6 py-5 shadow-sm focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2 hover:border-slate-400 dark:bg-dark-element dark:hover:border-primary"
                             >
-                                {{ if company:logo }}
+                                {{ if company:featured_image }}
                                     <div class="flex-shrink-0">
-                                        {{ svg :src="company:logo" class="h-16 w-16" }}
+                                        {{ svg :src="company:featured_image" class="h-16 w-16" }}
                                     </div>
                                 {{ /if }}
                                 <div class="min-w-0 flex-1">

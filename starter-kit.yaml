@@ -15,6 +15,7 @@ export_paths:
   - resources/forms
   - resources/js/site.js
   - resources/views
+  - routes/web.php
   - .editorconfig
   - .prettierrc
   - package.json

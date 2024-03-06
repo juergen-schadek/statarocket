@@ -1,0 +1,145 @@
+title: Company
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+              display: Title
+              instructions_position: above
+              listable: true
+              visibility: visible
+              replicator_preview: true
+              input_type: text
+              antlers: false
+              hide_display: false
+          -
+            handle: subtitle
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Subtitle
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: description
+            field: markdown.markdown
+            config:
+              display: Description
+          -
+            handle: website
+            field:
+              input_type: url
+              antlers: false
+              type: text
+              display: Website
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            import: social_links
+          -
+            handle: content
+            field: bard.content
+          -
+            handle: layout
+            field:
+              hide_partials: true
+              blueprint: false
+              type: template
+              display: Layout
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: template
+            field:
+              hide_partials: true
+              blueprint: false
+              type: template
+              display: Template
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+              display: Slug
+              instructions_position: above
+              listable: true
+              visibility: visible
+              replicator_preview: true
+              from: title
+              generate: true
+              show_regenerate: true
+              hide_display: false
+          -
+            handle: featured_image
+            field:
+              max_files: 1
+              mode: grid
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: Logo
+              listable: true
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: background_color
+            field: background.background_color
+          -
+            handle: author
+            field:
+              max_items: 1
+              mode: select
+              type: users
+              display: Author
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+  SEO:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: seo
+            field:
+              type: seo_pro
+              listable: false
+              display: SEO
