@@ -3,8 +3,7 @@ id: home
 blueprint: page_with_hero
 title: Home
 updated_by: 075692b5-b33a-4310-a2bb-73666e5899c1
-updated_at: 1709665649
-subtitle: 'This is the homepage'
+updated_at: 1709713404
 hero_title: StataRocket
 hero_subtitle: 'A Starter Kit for Statamic'
 hero_text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta non cupiditate maxime doloremque iste dolores cumque nobis autem voluptas tenetur.'

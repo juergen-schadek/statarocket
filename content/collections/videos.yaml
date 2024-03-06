@@ -1,0 +1,20 @@
+title: Videos
+template: videos/show
+layout: layout
+mount: d4d732f4-a496-48b3-9b24-cfdd9ec75edc
+taxonomies:
+  - categories
+  - playlists
+  - tags
+revisions: false
+route: 'videos/{slug}'
+date: true
+sort_dir: desc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

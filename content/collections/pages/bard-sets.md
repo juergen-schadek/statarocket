@@ -3,7 +3,8 @@ id: 23fb9a54-34c2-491f-b70c-ff959685cf05
 blueprint: page
 title: 'Bard Sets'
 updated_by: 075692b5-b33a-4310-a2bb-73666e5899c1
-updated_at: 1709710565
+updated_at: 1709713561
+subtitle: 'Demo of the Bard Sets'
 content:
   -
     type: set
@@ -11,8 +12,8 @@ content:
       id: lterdums
       values:
         type: bullet_points
-        background_color: bg-yellow-50
-        heading_1: 'Bullet points'
+        background_color: bg-blue-50
+        heading_1: 'Bullet Points'
         bullet_points:
           - 'Item #1'
           - 'Item #2'
@@ -27,7 +28,7 @@ content:
       id: lterqf55
       values:
         type: call_to_action
-        background_color: bg-pink-50
+        background_color: bg-gray-100
         heading_1: 'Call to action ...and ACTION!'
         button_1_text: 'Do something'
         button_1_link: '#'
@@ -56,37 +57,34 @@ content:
       id: ltfgl9u0
       values:
         type: collections
-        background_color: bg-red-50
+        background_color: bg-green-50
         heading_1: Collections
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aspernatur quisquam expedita cumque mollitia, consequatur deleniti praesentium atque tenetur reprehenderit sed amet itaque odit possimus labore vel, eius rerum, pariatur omnis obcaecati error dolor! Ut facere voluptatum molestiae aliquid. Vel id quaerat maiores fugit, inventore molestiae esse laboriosam enim ut.'
         collections:
-          - pages
+          - blog
+          - videos
   -
     type: set
     attrs:
       id: ltfh3s59
       values:
         type: companies
-        background_color: bg-pink-50
+        background_color: bg-orange-50
         heading_1: Companies
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aspernatur quisquam expedita cumque mollitia, consequatur deleniti praesentium atque tenetur reprehenderit sed amet itaque odit possimus labore vel, eius rerum, pariatur omnis obcaecati error dolor! Ut facere voluptatum molestiae aliquid. Vel id quaerat maiores fugit, inventore molestiae esse laboriosam enim ut.'
-  -
-    type: paragraph
-    attrs:
-      textAlign: left
   -
     type: set
     attrs:
       id: ltffnyy2
       values:
         type: features
-        background_color: bg-white
+        background_color: bg-pink-50
         heading_1: Features
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aspernatur quisquam expedita cumque mollitia, consequatur deleniti praesentium atque tenetur reprehenderit sed amet itaque odit possimus labore vel, eius rerum, pariatur omnis obcaecati error dolor! Ut facere voluptatum molestiae aliquid. Vel id quaerat maiores fugit, inventore molestiae esse laboriosam enim ut.'
         features:
           -
             id: ltffouzb
-            background_color: bg-pink-50
+            background_color: bg-blue-50
             icon: icons/solid/academic-cap.svg
             heading_1: 'Feature #1'
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aspernatur quisquam expedita cumque mollitia, consequatur deleniti praesentium atque tenetur reprehenderit sed amet itaque odit possimus labore vel, eius rerum, pariatur omnis obcaecati error dolor! Ut facere voluptatum molestiae aliquid. Vel id quaerat maiores fugit, inventore molestiae esse laboriosam enim ut.'
@@ -95,7 +93,7 @@ content:
             enabled: true
           -
             id: ltffr8xm
-            background_color: bg-blue-50
+            background_color: bg-green-50
             icon: icons/outline/adjustments-horizontal.svg
             heading_1: 'Feature #2'
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aspernatur quisquam expedita cumque mollitia, consequatur deleniti praesentium atque tenetur reprehenderit sed amet itaque odit possimus labore vel, eius rerum, pariatur omnis obcaecati error dolor! Ut facere voluptatum molestiae aliquid. Vel id quaerat maiores fugit, inventore molestiae esse laboriosam enim ut.'
@@ -117,7 +115,7 @@ content:
       id: ltesnspb
       values:
         type: gallery
-        background_color: bg-pink-50
+        background_color: bg-red-50
         heading_1: Gallery
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aspernatur quisquam expedita cumque mollitia, consequatur deleniti praesentium atque tenetur reprehenderit sed amet itaque odit possimus labore vel, eius rerum, pariatur omnis obcaecati error dolor! Ut facere voluptatum molestiae aliquid. Vel id quaerat maiores fugit, inventore molestiae esse laboriosam enim ut.'
         images:
@@ -152,7 +150,7 @@ content:
       id: ltfezqap
       values:
         type: jobs
-        background_color: bg-green-50
+        background_color: bg-sky-50
         heading_1: Jobs
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aspernatur quisquam expedita cumque mollitia, consequatur deleniti praesentium atque tenetur reprehenderit sed amet itaque odit possimus labore vel, eius rerum, pariatur omnis obcaecati error dolor! Ut facere voluptatum molestiae aliquid. Vel id quaerat maiores fugit, inventore molestiae esse laboriosam enim ut.'
         jobs:
@@ -226,7 +224,7 @@ content:
       id: ltesd05e
       values:
         type: skill_bar
-        background_color: bg-orange-50
+        background_color: bg-white
         heading_1: 'Skill bar'
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aspernatur quisquam expedita cumque mollitia, consequatur deleniti praesentium atque tenetur reprehenderit sed amet itaque odit possimus labore vel, eius rerum, pariatur omnis obcaecati error dolor! Ut facere voluptatum molestiae aliquid. Vel id quaerat maiores fugit, inventore molestiae esse laboriosam enim ut.'
         skills:
@@ -263,7 +261,7 @@ content:
       id: ltfgq5tv
       values:
         type: tags
-        background_color: bg-orange-50
+        background_color: bg-yellow-50
         heading_1: Tags
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aspernatur quisquam expedita cumque mollitia, consequatur deleniti praesentium atque tenetur reprehenderit sed amet itaque odit possimus labore vel, eius rerum, pariatur omnis obcaecati error dolor! Ut facere voluptatum molestiae aliquid. Vel id quaerat maiores fugit, inventore molestiae esse laboriosam enim ut.'
         tags:
@@ -273,10 +271,21 @@ content:
   -
     type: set
     attrs:
+      id: ltfi77wi
+      values:
+        type: taxonomy_terms
+        background_color: bg-blue-50
+        heading_1: 'Taxonomy Terms'
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aspernatur quisquam expedita cumque mollitia, consequatur deleniti praesentium atque tenetur reprehenderit sed amet itaque odit possimus labore vel, eius rerum, pariatur omnis obcaecati error dolor! Ut facere voluptatum molestiae aliquid. Vel id quaerat maiores fugit, inventore molestiae esse laboriosam enim ut.'
+        taxonomy_terms:
+          - 'article_series::article-series-1'
+  -
+    type: set
+    attrs:
       id: ltfhf0xg
       values:
         type: timeline
-        background_color: bg-orange-50
+        background_color: bg-gray-100
         heading_1: Timeline
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aspernatur quisquam expedita cumque mollitia, consequatur deleniti praesentium atque tenetur reprehenderit sed amet itaque odit possimus labore vel, eius rerum, pariatur omnis obcaecati error dolor! Ut facere voluptatum molestiae aliquid. Vel id quaerat maiores fugit, inventore molestiae esse laboriosam enim ut.'
         entries:

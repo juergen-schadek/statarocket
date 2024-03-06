@@ -1,0 +1,22 @@
+<div>
+    <h3
+        class="text-sm font-semibold leading-6 text-heading dark:text-heading-inverted"
+    >
+        {{ svg src="/assets/icons/outline/tag" class="inline-flex h-6 w-6 text-primary" }}
+        <span class="ml-1">Schlagwörter</span>
+    </h3>
+    {{ taxonomy:tags as="terms" }}
+        {{ if !no_results }}
+            <p class="mt-6 text-sm text-text-muted">
+                {{ terms }}
+                    <a
+                        class="mb-2 inline-flex items-center justify-center rounded-3xl bg-element px-2 py-1 dark:bg-dark-element"
+                        href="{{ url }}"
+                    >
+                        {{ title }}
+                    </a>
+                {{ /terms }}
+            </p>
+        {{ /if }}
+    {{ /taxonomy:tags }}
+</div>

@@ -740,6 +740,11 @@ fields:
                     hide_display: false
                     validate:
                       - required
+                    taxonomies:
+                      - article_series
+                      - categories
+                      - playlists
+                      - tags
             timeline:
               display: Timeline
               instructions: null

@@ -1,0 +1,52 @@
+{{ partial:header }}
+<main class="py-16">
+    <div class="container mx-auto max-w-screen-xl px-4 pb-4 sm:px-6 lg:px-8">
+        <h1
+            class="mb-6 text-3xl font-extrabold tracking-tight text-heading dark:text-heading-inverted sm:text-4xl lg:text-5xl"
+        >
+            {{ title }}
+        </h1>
+        <div class="flex">
+            <hr class="mb-4 w-24 border-t-4 border-primary" />
+        </div>
+        {{ partial:breadcrumbs }}
+    </div>
+    {{ partial:bard_field }}
+    <div class="container mx-auto max-w-screen-xl px-4 pb-16 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row">
+            <section class="w-full lg:w-9/12">
+                {{ entries paginate="6" sort="date:asc" as="entries" }}
+                    {{ if no_results }}
+                        <p class="font-semibold">
+                            Sorry, es wurden keine Einträge gefunden!
+                        </p>
+                    {{ else }}
+                        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                            {{ entries }}
+                                {{ if collection == "blog" }}
+                                    {{ partial:posts }}
+                                {{ elseif collection == "videos" }}
+                                    {{ partial:clips }}
+                                {{ /if }}
+                            {{ /entries }}
+                        </div>
+                        {{ paginate }}
+                            {{ partial:pagination }}
+                        {{ /paginate }}
+                    {{ /if }}
+                {{ /entries }}
+            </section>
+            <aside class="mt-8 w-full lg:ml-8 lg:mt-0 lg:w-3/12">
+                <div
+                    class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-1"
+                >
+                    {{ partial:widget_categories }}
+                    {{ partial:widget_article_series }}
+                    {{ partial:widget_tags }}
+                </div>
+            </aside>
+        </div>
+    </div>
+    {{ partial:contact_form }}
+</main>
+{{ partial:footer }}

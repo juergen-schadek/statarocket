@@ -9,6 +9,13 @@
             >
                 {{ title }}
             </h1>
+            {{ if subtitle }}
+                <h2
+                    class="mb-6 text-2xl font-medium tracking-tight text-heading dark:text-heading-inverted sm:text-3xl lg:text-4xl"
+                >
+                    {{ subtitle }}
+                </h2>
+            {{ /if }}
             <div class="flex">
                 <hr class="mb-4 w-24 border-t-4 border-primary" />
             </div>

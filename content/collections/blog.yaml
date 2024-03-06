@@ -1,0 +1,20 @@
+title: Blog
+template: blog/show
+layout: layout
+mount: 0c88b9c9-718d-4b8b-9995-11a0a40b683d
+taxonomies:
+  - article_series
+  - categories
+  - tags
+revisions: false
+route: 'blog/{slug}'
+date: true
+sort_dir: desc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

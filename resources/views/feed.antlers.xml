@@ -1,0 +1,19 @@
+{{ collection:blog }}
+<entry>
+    <title>{{ title | sanitize }}</title>
+    <link href="{{ site:url }}{{ url }}" />
+    <id>{{ site:url }}{{ url }}</id>
+    <published>{{ date format="c" }}</published>
+    <updated>{{ updated_at format="c" }}</updated>
+    <author>
+        <name>{{ author:name | sanitize }}</name>
+        <uri>{{ site:url }}/blog/autor/{{ author:slug }}</uri>
+    </author>
+    <summary type="html">
+        &lt;img src=&quot;{{ site:url }}/{{ featured_image | sanitize }}&quot;
+        alt=&quot;{{ featured_image:alt | sanitize }}&quot;&gt;&lt;br&gt;{{
+            excerpt | sanitize
+        }}
+    </summary>
+</entry>
+{{ /collection:blog }}

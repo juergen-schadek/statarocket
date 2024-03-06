@@ -1,0 +1,35 @@
+title: 'Company & Position'
+fields:
+  -
+    handle: company
+    field:
+      max_items: 1
+      mode: select
+      create: true
+      collections:
+        - companies
+      type: entries
+      display: Company
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      validate:
+        - required
+  -
+    handle: position
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Position
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      validate:
+        - required

@@ -1,0 +1,69 @@
+title: 'Personal Informations'
+fields:
+  -
+    handle: personal_informations
+    field:
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        personal_informations:
+          display: 'Personal Informations'
+          instructions: null
+          icon: null
+          sets:
+            information:
+              display: Information
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: icon
+                  field:
+                    max_files: 1
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: Icon
+                    width: 25
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: link
+                  field:
+                    collections:
+                      - pages
+                    container: assets
+                    type: link
+                    display: Link
+                    width: 75
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: content
+                  field:
+                    antlers: true
+                    type: textarea
+                    display: Content
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+      type: replicator
+      display: 'Personal Informations'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

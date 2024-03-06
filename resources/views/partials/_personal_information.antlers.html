@@ -1,0 +1,28 @@
+<div class="bg-slate-100 px-2 py-5 sm:px-4 lg:px-6">
+    <div class="flex flex-col items-center justify-center lg:block">
+        {{ if settings:personal_information }}
+        <div
+            class="grid grid-cols-1 gap-4 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-1"
+        >
+            {{ settings:personal_information}}
+            <div class="flex items-center space-x-1">
+                {{ svg :src="icon" class="h-5 w-5 text-primary" }}
+                <div class="text-sm lg:text-base">
+                    {{ if url }}<a href="{{ url }}" target="_blank"
+                        >{{ /if }} {{ content }} {{ if url }}</a
+                    >{{ /if }}
+                </div>
+            </div>
+            {{ /settings:personal_information}}
+        </div>
+        {{ /if }} {{ if settings:vcard }}
+        <a
+            class="mt-4 flex items-center justify-center rounded-2xl border border-transparent bg-primary px-4 py-2 text-sm font-medium text-white shadow-lg shadow-primary/50 hover:bg-secondary hover:shadow-secondary/50 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 lg:text-base"
+            href="{{ settings:vcard }}"
+        >
+            {{ svg src="/assets/icons/solid/user-add" class="mr-2 h-5 w-5"
+            }} Kontakt speichern
+        </a>
+        {{ /if }}
+    </div>
+</div>

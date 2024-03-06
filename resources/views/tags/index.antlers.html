@@ -1,0 +1,44 @@
+{{ partial:header }}
+<main class="py-16">
+    <div class="container mx-auto max-w-screen-xl px-4 pb-4 sm:px-6 lg:px-8">
+        <h1
+            class="mb-6 text-3xl font-extrabold tracking-tight text-heading dark:text-heading-inverted sm:text-4xl lg:text-5xl"
+        >
+            {{ title }}
+        </h1>
+        {{ if subtitle }}
+            <h2
+                class="mb-6 text-2xl font-medium tracking-tight text-heading dark:text-heading-inverted sm:text-3xl lg:text-4xl"
+            >
+                {{ subtitle }}
+            </h2>
+        {{ /if }}
+        <div class="flex">
+            <hr class="mb-4 w-24 border-t-4 border-primary" />
+        </div>
+        {{ partial:breadcrumbs }}
+    </div>
+    {{ partial:bard_field }}
+    <section>
+        <div
+            class="container mx-auto max-w-screen-xl px-4 pb-16 sm:px-6 lg:px-8"
+        >
+            {{ taxonomy:tags as="terms" }}
+                {{ if !no_results }}
+                    <p class="mt-6 text-sm text-text-muted">
+                        {{ terms }}
+                            <a
+                                class="mb-2 inline-flex items-center justify-center rounded-3xl bg-element px-2 py-1 dark:bg-dark-element"
+                                href="{{ url }}"
+                            >
+                                {{ title }}
+                            </a>
+                        {{ /terms }}
+                    </p>
+                {{ /if }}
+            {{ /taxonomy:tags }}
+        </div>
+    </section>
+    {{ partial:contact_form }}
+</main>
+{{ partial:footer }}

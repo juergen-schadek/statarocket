@@ -1,0 +1,61 @@
+<div
+    class="flex min-h-full items-center justify-center px-6 py-24 sm:py-32 lg:px-8"
+>
+    <div class="w-80 rounded-lg bg-header shadow">
+        <a href="{{ site:permalink }}">
+            {{ if avatar }}
+                <img
+                    class="mx-auto -mt-20 h-40 w-40 rounded-3xl"
+                    src="{{ glide:avatar width="160" height="160" }}"
+                    alt="{{ avatar:alt }}"
+                />
+            {{ else }}
+                <div
+                    class="mx-auto -mt-20 flex h-40 w-40 items-center justify-center rounded-3xl bg-slate-200"
+                >
+                    {{ svg class="h-24 w-24 text-primary" src="/assets/icons/outline/user" }}
+                </div>
+            {{ /if }}
+        </a>
+        <div class="px-2 py-4 text-center sm:px-4 lg:px-6">
+            <h1
+                class="mb-6 text-xl font-extrabold tracking-tight text-menu dark:text-menu-inverted sm:text-2xl lg:text-3xl"
+            >
+                {{ title }}
+            </h1>
+            <div
+                class="inline-flex items-center justify-center rounded-3xl bg-primary px-6 py-2 text-sm text-heading-inverted lg:text-base"
+            >
+                {{ subtitle }}
+            </div>
+            {{ partial:social_links class_items="fill-primary hover:fill-primary-hover dark:fill-secondary dark:hover:fill-secondary-hover text-primary hover:text-primary-hover dark:text-secondary dark:hover:text-secondary-hover" }}
+        </div>
+        <div
+            class="overflow-hidden rounded-b-lg bg-element dark:bg-dark-element"
+        >
+            <div class="space-y-8 px-2 py-4 sm:px-4 lg:px-6">
+                <div class="grid grid-cols-1 gap-4">
+                    {{ personal_informations }}
+                        <div class="flex items-center space-x-2">
+                            {{ svg :src="icon" class="h-5 w-5 text-primary" }}
+                            <div class="text-sm lg:text-base">
+                                {{ if url }}
+                                    <a href="{{ link }}">{{ content }}</a>
+                                {{ else }}
+                                    {{ content }}
+                                {{ /if }}
+                            </div>
+                        </div>
+                    {{ /personal_informations }}
+                </div>
+                <a
+                    class="flex items-center justify-center rounded-md bg-primary px-4 py-3 font-semibold text-heading-inverted shadow-sm hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    href="{{ vcard }}"
+                >
+                    {{ svg src="/assets/icons/solid/user-plus" class="mr-2 h-5 w-5" }}
+                    <span>Save contact</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

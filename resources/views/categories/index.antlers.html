@@ -1,0 +1,73 @@
+{{ partial:header }}
+<main class="py-16">
+    <div class="container mx-auto max-w-screen-xl px-4 pb-4 sm:px-6 lg:px-8">
+        <h1
+            class="mb-6 text-3xl font-extrabold tracking-tight text-heading dark:text-heading-inverted sm:text-4xl lg:text-5xl"
+        >
+            {{ title }}
+        </h1>
+        {{ if subtitle }}
+            <h2
+                class="mb-6 text-2xl font-medium tracking-tight text-heading dark:text-heading-inverted sm:text-3xl lg:text-4xl"
+            >
+                {{ subtitle }}
+            </h2>
+        {{ /if }}
+        <div class="flex">
+            <hr class="mb-4 w-24 border-t-4 border-primary" />
+        </div>
+        {{ partial:breadcrumbs }}
+    </div>
+    {{ partial:bard_field }}
+    <section>
+        <div
+            class="container mx-auto max-w-screen-xl px-4 pb-16 sm:px-6 lg:px-8"
+        >
+            {{ taxonomy:categories as="terms" }}
+                {{ if !no_results }}
+                    <ul
+                        role="list"
+                        class="divide-y divide-slate-200 overflow-hidden rounded-lg bg-element shadow ring-1 ring-slate-900/5 dark:bg-dark-element dark:ring-slate-200"
+                    >
+                        {{ terms }}
+                            <li
+                                class="relative flex justify-between gap-x-6 px-4 py-5 hover:bg-menu-text-bg-hover dark:hover:bg-dark-menu-text-bg-hover sm:px-6"
+                            >
+                                <div class="flex min-w-0 gap-x-4">
+                                    {{ svg src="/assets/icons/outline/folder" class="flex-none h-6 w-6 text-primary" }}
+                                    <div class="min-w-0 flex-auto">
+                                        <p
+                                            class="font-semibold leading-6 text-heading dark:text-heading-inverted"
+                                        >
+                                            <a href="{{ url }}">
+                                                <span
+                                                    class="absolute inset-x-0 -top-px bottom-0"
+                                                ></span>
+                                                {{ title }}
+                                            </a>
+                                        </p>
+                                        <p
+                                            class="mt-1 flex max-w-xl text-sm leading-5"
+                                        >
+                                            {{ content | raw | bard_text }}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex shrink-0 items-center gap-x-4">
+                                    <span
+                                        class="flex-none rounded-full bg-primary px-3 py-0.5 text-xs text-heading-inverted"
+                                    >
+                                        {{ entries_count }}
+                                    </span>
+                                    {{ svg src="/assets/icons/outline/chevron-right" class="h-5 w-5 flex-none text-slate-400" }}
+                                </div>
+                            </li>
+                        {{ /terms }}
+                    </ul>
+                {{ /if }}
+            {{ /taxonomy:categories }}
+        </div>
+    </section>
+    {{ partial:contact_form }}
+</main>
+{{ partial:footer }}

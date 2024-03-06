@@ -1,0 +1,122 @@
+{{ partial:header }}
+<main class="py-16">
+    <section>
+        <div
+            class="container mx-auto max-w-screen-lg px-4 pb-4 sm:px-6 lg:px-8"
+        >
+            <div class="space-y-16">
+                <div
+                    class="flex h-72 items-center justify-center overflow-hidden rounded-lg bg-element px-4 py-6 shadow dark:bg-dark-element sm:px-6 sm:py-8 lg:px-8 lg:py-10"
+                >
+                    {{ if avatar }}
+                        <img
+                            class="mx-auto h-48 w-48 rounded-full md:h-56 md:w-56"
+                            src="{{ glide:avatar width="225" height="225" }}"
+                            alt="{{ avatar:alt }}"
+                        />
+                    {{ else }}
+                        {{ svg class="mx-auto h-48 w-48 text-primary md:h-56 md:w-56" src="/assets/icons/outline/user" }}
+                    {{ /if }}
+                </div>
+                <h1
+                    class="text-center text-3xl font-extrabold tracking-tight text-heading dark:text-heading-inverted sm:text-4xl lg:text-5xl"
+                >
+                    {{ first_name }}
+                    {{ last_name }}
+                </h1>
+                {{ if description }}
+                    <div
+                        class="{{ settings:typography }} prose mx-auto max-w-3xl text-center dark:prose-invert"
+                    >
+                        {{ description }}
+                    </div>
+                {{ /if }}
+                {{ if companies }}
+                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        {{ companies }}
+                            <div
+                                class="relative flex items-center space-x-3 rounded-lg border border-slate-300 bg-element px-6 py-5 shadow-sm focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2 hover:border-slate-400 dark:bg-dark-element dark:hover:border-primary"
+                            >
+                                {{ if company:logo }}
+                                    <div class="flex-shrink-0">
+                                        {{ svg :src="company:logo" class="h-16 w-16" }}
+                                    </div>
+                                {{ /if }}
+                                <div class="min-w-0 flex-1">
+                                    <a
+                                        class="focus:outline-none"
+                                        href="{{ company:url }}"
+                                    >
+                                        <span
+                                            class="absolute inset-0"
+                                            aria-hidden="true"
+                                        ></span>
+                                        <p
+                                            class="font-medium text-heading dark:text-heading-inverted"
+                                        >
+                                            {{ company:title }}
+                                        </p>
+                                        {{ if position }}
+                                            <p class="truncate text-text-muted">
+                                                {{ position }}
+                                            </p>
+                                        {{ /if }}
+                                    </a>
+                                </div>
+                            </div>
+                        {{ /companies }}
+                    </div>
+                {{ /if }}
+                {{ if phone or email }}
+                    <div
+                        class="flex flex-col items-center justify-center gap-4"
+                    >
+                        {{ if phone }}
+                            <div class="flex">
+                                {{ svg class="h-6 w-6" src="/assets/icons/outline/phone" }}
+                                <div
+                                    class="ml-1 text-heading dark:text-heading-inverted"
+                                >
+                                    <a
+                                        href="tel://{{ phone | regex_replace(' ') }}"
+                                    >
+                                        {{ phone }}
+                                    </a>
+                                </div>
+                            </div>
+                        {{ /if }}
+                        {{ if email }}
+                            <div class="flex">
+                                {{ svg class="h-6 w-6" src="/assets/icons/outline/envelope" }}
+                                <div
+                                    class="ml-1 text-heading dark:text-heading-inverted"
+                                >
+                                    <a href="mailto:{{ email }}">
+                                        {{ email }}
+                                    </a>
+                                </div>
+                            </div>
+                        {{ /if }}
+                    </div>
+                {{ /if }}
+                {{ if website }}
+                    <div class="flex items-center justify-center">
+                        <a
+                            class="flex items-center justify-center rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-heading-inverted shadow-sm hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                            href="{{ website }}"
+                            target="_blank"
+                        >
+                            Webseite
+                        </a>
+                    </div>
+                {{ /if }}
+                {{ partial:social_links not_global="true" class="flex items-center justify-center gap-x-4" class_items="fill-primary hover:fill-primary-hover dark:fill-secondary dark:hover:fill-secondary-hover text-primary hover:text-primary-hover dark:text-secondary dark:hover:text-secondary-hover" }}
+            </div>
+        </div>
+    </section>
+    <article>
+        {{ partial:bard_field class="container mx-auto max-w-screen-lg px-4 py-16 sm:px-6 lg:px-8" }}
+    </article>
+    {{ partial:contact_form }}
+</main>
+{{ partial:footer }}

@@ -1,0 +1,152 @@
+<div
+    class="mt-8 flex items-center justify-between border-t border-slate-200 py-3"
+>
+    <div class="flex flex-1 justify-between sm:hidden" aria-label="Pagination">
+        {{ if prev_page }}
+            <a
+                href="{{ prev_page }}"
+                class="relative inline-flex items-center rounded-md border border-slate-300 bg-menu-bg px-4 py-2 text-sm font-medium text-text-muted hover:bg-menu-text-bg-hover dark:border-slate-800 dark:bg-dark-element dark:hover:bg-dark-menu-text-bg-hover"
+            >
+                vorherige Seite
+            </a>
+        {{ else }}
+            <span
+                class="relative inline-flex items-center rounded-md border border-slate-300 bg-menu-bg px-4 py-2 text-sm font-medium text-text-muted dark:border-slate-800 dark:bg-dark-element"
+            >
+                vorherige Seite
+            </span>
+        {{ /if }}
+        {{ if next_page }}
+            <a
+                href="{{ next_page }}"
+                class="relative ml-3 inline-flex items-center rounded-md border border-slate-300 bg-menu-bg px-4 py-2 text-sm font-medium text-text-muted hover:bg-menu-text-bg-hover dark:border-slate-800 dark:bg-dark-element dark:hover:bg-dark-menu-text-bg-hover"
+            >
+                nächste Seite
+            </a>
+        {{ else }}
+            <span
+                class="relative inline-flex items-center rounded-md border border-slate-300 bg-menu-bg px-4 py-2 text-sm font-medium text-text-muted dark:border-slate-800 dark:bg-dark-element"
+            >
+                nächste Seite
+            </span>
+        {{ /if }}
+    </div>
+    <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+        <div>
+            <p class="text-sm text-text-muted">
+                {{ if total_items === 1 }}
+                    Es wurde
+                    <span class="font-medium">{{ total_items }}</span>
+                    Eintrag gefunden.
+                {{ else }}
+                    Es wurden
+                    <span class="font-medium">{{ total_items }}</span>
+                    Einträge gefunden.
+                {{ /if }}
+            </p>
+        </div>
+        <div>
+            <nav
+                class="isolate inline-flex -space-x-px rounded-md shadow-sm"
+                aria-label="Pagination"
+            >
+                {{ if prev_page }}
+                    <a
+                        href="{{ prev_page }}"
+                        class="relative inline-flex items-center rounded-l-md bg-menu-bg px-2 py-2 text-text-muted ring-1 ring-inset ring-black/5 hover:bg-menu-text-bg-hover focus:z-20 focus:outline-offset-0 dark:bg-dark-menu-bg dark:ring-white/5 dark:hover:bg-dark-menu-text-bg-hover"
+                    >
+                        <span class="sr-only">vorherige Seite</span>
+                        {{ svg src="/assets/icons/outline/chevron-left" class="h-4 w-4" }}
+                    </a>
+                {{ else }}
+                    <span
+                        class="relative inline-flex items-center rounded-l-md bg-menu-bg px-2 py-2 text-text-muted ring-1 ring-inset ring-black/5 focus:z-20 focus:outline-offset-0 dark:bg-dark-menu-bg dark:ring-white/5"
+                    >
+                        <span class="sr-only">vorherige Seite</span>
+                        {{ svg src="/assets/icons/outline/chevron-left" class="h-4 w-4" }}
+                    </span>
+                {{ /if }}
+                {{ links:segments }}
+                    {{ first }}
+                        {{ if page == current_page }}
+                            <span
+                                class="relative z-10 inline-flex items-center bg-primary px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                            >
+                                {{ page }}
+                            </span>
+                        {{ else }}
+                            <a
+                                href="{{ url }}"
+                                class="relative inline-flex items-center bg-menu-bg px-4 py-2 text-sm font-semibold text-text-muted ring-1 ring-inset ring-black/5 hover:bg-menu-text-bg-hover focus:z-20 focus:outline-offset-0 dark:bg-dark-menu-bg dark:ring-white/5 dark:hover:bg-dark-menu-text-bg-hover"
+                            >
+                                {{ page }}
+                            </a>
+                        {{ /if }}
+                    {{ /first }}
+                    {{ if slider }}
+                        <span
+                            class="relative inline-flex items-center bg-menu-bg px-4 py-2 text-sm font-semibold text-text-muted ring-1 ring-inset ring-black/5 focus:outline-offset-0 dark:bg-dark-menu-bg dark:ring-white/5"
+                        >
+                            ...
+                        </span>
+                    {{ /if }}
+                    {{ slider }}
+                        {{ if page == current_page }}
+                            <span
+                                class="relative z-10 inline-flex items-center bg-primary px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                            >
+                                {{ page }}
+                            </span>
+                        {{ else }}
+                            <a
+                                href="{{ url }}"
+                                class="relative inline-flex items-center bg-menu-bg px-4 py-2 text-sm font-semibold text-text-muted ring-1 ring-inset ring-black/5 hover:bg-menu-text-bg-hover focus:z-20 focus:outline-offset-0 dark:bg-dark-menu-bg dark:ring-white/5 dark:hover:bg-dark-menu-text-bg-hover"
+                            >
+                                {{ page }}
+                            </a>
+                        {{ /if }}
+                    {{ /slider }}
+                    {{ if slider || (!slider && last) }}
+                        <span
+                            class="relative inline-flex items-center bg-menu-bg px-4 py-2 text-sm font-semibold text-text-muted ring-1 ring-inset ring-black/5 focus:outline-offset-0 dark:bg-dark-menu-bg dark:ring-white/5"
+                        >
+                            ...
+                        </span>
+                    {{ /if }}
+                    {{ last }}
+                        {{ if page == current_page }}
+                            <span
+                                class="relative z-10 inline-flex items-center bg-primary px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                            >
+                                {{ page }}
+                            </span>
+                        {{ else }}
+                            <a
+                                href="{{ url }}"
+                                class="relative inline-flex items-center bg-menu-bg px-4 py-2 text-sm font-semibold text-text-muted ring-1 ring-inset ring-black/5 hover:bg-menu-text-bg-hover focus:z-20 focus:outline-offset-0 dark:bg-dark-menu-bg dark:ring-white/5 dark:hover:bg-dark-menu-text-bg-hover"
+                            >
+                                {{ page }}
+                            </a>
+                        {{ /if }}
+                    {{ /last }}
+                {{ /links:segments }}
+                {{ if next_page }}
+                    <a
+                        href="{{ next_page }}"
+                        class="relative inline-flex items-center rounded-r-md bg-menu-bg px-2 py-2 text-text-muted ring-1 ring-inset ring-black/5 hover:bg-menu-text-bg-hover focus:z-20 focus:outline-offset-0 dark:bg-dark-menu-bg dark:ring-white/5 dark:hover:bg-dark-menu-text-bg-hover"
+                    >
+                        <span class="sr-only">nächste Seite</span>
+                        {{ svg src="/assets/icons/outline/chevron-right" class="h-4 w-4" }}
+                    </a>
+                {{ else }}
+                    <span
+                        class="relative inline-flex items-center rounded-r-md bg-menu-bg px-2 py-2 text-text-muted ring-1 ring-inset ring-black/5 focus:z-20 focus:outline-offset-0 dark:bg-dark-menu-bg dark:ring-white/5"
+                    >
+                        <span class="sr-only">nächste Seite</span>
+                        {{ svg src="/assets/icons/outline/chevron-right" class="h-4 w-4" }}
+                    </span>
+                {{ /if }}
+            </nav>
+        </div>
+    </div>
+</div>
