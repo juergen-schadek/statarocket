@@ -1,9 +1,7 @@
 export_paths:
   - content
   - public/assets
-  - resources/blueprints/collections
-  - resources/blueprints/forms
-  - resources/blueprints/globals
+  - resources/blueprints
   - resources/css/site.css
   - resources/fieldsets
   - resources/fonts

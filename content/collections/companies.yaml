@@ -13,6 +13,9 @@ preview_targets:
     label: Entry
     url: '{permalink}'
     refresh: true
+inject:
+  seo:
+    description: '@seo:description'
 structure:
   root: false
   max_depth: 1

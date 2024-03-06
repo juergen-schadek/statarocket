@@ -1,0 +1,100 @@
+title: User
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              type: text
+              display: Name
+              instructions_position: above
+              listable: true
+              visibility: visible
+              replicator_preview: true
+              input_type: text
+              antlers: false
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: email
+            field:
+              type: text
+              input_type: email
+              display: E-Mail
+              listable: true
+              input: email
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              antlers: false
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: roles
+            field:
+              type: user_roles
+              mode: select
+              width: 50
+              listable: true
+              filterable: false
+              display: Roles
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: groups
+            field:
+              type: user_groups
+              mode: select
+              width: 50
+              listable: true
+              filterable: false
+              display: Groups
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: avatar
+            field:
+              type: assets
+              max_files: 1
+              container: assets
+              display: Avatar
+              instructions_position: above
+              listable: true
+              visibility: visible
+              replicator_preview: true
+              mode: grid
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              hide_display: false
+          -
+            handle: bio
+            field: markdown.markdown
+            config:
+              display: Biography
+          -
+            handle: slug
+            field:
+              from: name
+              generate: true
+              show_regenerate: true
+              type: slug
+              display: Slug
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+                - 'max:200'
