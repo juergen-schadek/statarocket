@@ -46,9 +46,16 @@
                                     <p
                                         class="text-sm font-medium text-heading dark:text-heading-inverted"
                                     >
-                                        <a href="{{ link }}" target="_blank">
+                                        {{ if link }}
+                                            <a
+                                                href="{{ link }}"
+                                                target="_blank"
+                                            >
+                                                {{ company }}
+                                            </a>
+                                        {{ else }}
                                             {{ company }}
-                                        </a>
+                                        {{ /if }}
                                     </p>
                                 </div>
                                 {{ if time }}
