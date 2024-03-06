@@ -3,7 +3,7 @@ id: 23fb9a54-34c2-491f-b70c-ff959685cf05
 blueprint: page
 title: 'Bard Sets'
 updated_by: 075692b5-b33a-4310-a2bb-73666e5899c1
-updated_at: 1709716826
+updated_at: 1709727468
 subtitle: 'Demo of the Bard Sets'
 content:
   -
@@ -315,5 +315,5 @@ content:
       id: ltfh4k88
       values:
         type: video
-        video: 'https://youtu.be/IHQMOklyqXM'
+        video: 'https://www.youtube-nocookie.com/embed/vWalPwbdk9Y'
 ---

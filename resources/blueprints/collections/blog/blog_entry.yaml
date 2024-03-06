@@ -1,4 +1,4 @@
-title: Person
+title: 'Blog Entry'
 tabs:
   main:
     display: Main
@@ -21,95 +21,22 @@ tabs:
               antlers: false
               hide_display: false
           -
-            handle: first_name
+            handle: subtitle
             field:
               input_type: text
               antlers: false
               type: text
-              display: 'First Name'
-              width: 50
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-              validate:
-                - required
-          -
-            handle: last_name
-            field:
-              input_type: text
-              antlers: false
-              type: text
-              display: 'Last Name'
-              width: 50
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-              validate:
-                - required
-          -
-            handle: companies
-            field:
-              fields:
-                -
-                  import: company_position
-              mode: table
-              add_row: 'Add company'
-              reorderable: true
-              fullscreen: true
-              type: grid
-              display: Companies
+              display: Subtitle
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
           -
-            handle: description
+            handle: excerpt
             field: markdown.markdown
             config:
-              display: Description
-          -
-            handle: phone
-            field:
-              input_type: tel
-              antlers: false
-              type: text
-              display: Phone
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-          -
-            handle: email
-            field:
-              input_type: email
-              antlers: false
-              type: text
-              display: E-Mail
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-          -
-            handle: website
-            field:
-              input_type: url
-              antlers: false
-              type: text
-              display: Website
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-          -
-            import: social_links
+              display: Excerpt
           -
             handle: content
             field: bard.content
@@ -170,11 +97,32 @@ tabs:
               show_filename: true
               show_set_alt: true
               type: assets
-              display: Avatar
+              display: 'Featured Image'
               listable: true
               instructions_position: above
               visibility: visible
               replicator_preview: true
+              hide_display: false
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+              display: Date
+              instructions_position: above
+              listable: true
+              visibility: visible
+              replicator_preview: true
+              mode: single
+              inline: false
+              full_width: false
+              columns: 1
+              rows: 1
+              time_enabled: true
+              time_seconds_enabled: false
               hide_display: false
           -
             handle: author
@@ -190,6 +138,67 @@ tabs:
               hide_display: false
               validate:
                 - required
+          -
+            handle: categories
+            field:
+              type: terms
+              taxonomies:
+                - categories
+              display: Categories
+              mode: select
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              replicator_preview: true
+              max_items: 1
+              create: true
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: tags
+            field:
+              type: terms
+              taxonomies:
+                - tags
+              display: Tags
+              mode: select
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              replicator_preview: true
+              create: true
+              hide_display: false
+          -
+            handle: article_series
+            field:
+              type: terms
+              taxonomies:
+                - article_series
+              display: 'Article Series'
+              mode: select
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              replicator_preview: true
+              max_items: 1
+              create: true
+              hide_display: false
+          -
+            handle: related_entries
+            field:
+              mode: default
+              create: true
+              collections:
+                - blog
+                - videos
+              type: entries
+              display: 'Related Entries'
+              listable: false
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
   SEO:
     display: SEO
     sections:
