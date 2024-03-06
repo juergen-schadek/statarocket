@@ -14,7 +14,7 @@ tabs:
                 - required
               display: Title
               instructions_position: above
-              listable: hidden
+              listable: true
               visibility: visible
               replicator_preview: true
               input_type: text
@@ -38,7 +38,7 @@ tabs:
                 - 'max:200'
               display: Slug
               instructions_position: above
-              listable: hidden
+              listable: true
               visibility: visible
               replicator_preview: true
               from: title
