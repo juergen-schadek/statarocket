@@ -1,9 +1,9 @@
 {
-    "name": "my-vendor-name/statarocket",
+    "name": "juergen-schadek/statarocket",
     "extra": {
         "statamic": {
-            "name": "Statarocket",
-            "description": "Statarocket starter kit"
+            "name": "StataRocket",
+            "description": "StataRocket starter kit"
         }
     }
 }
