@@ -63,7 +63,7 @@ fields:
           icon: null
           sets:
             bullet_points:
-              display: 'Bullet points'
+              display: 'Bullet Points'
               instructions: null
               icon: null
               fields:
@@ -82,7 +82,7 @@ fields:
                   handle: bullet_points
                   field:
                     type: list
-                    display: 'Bullet points'
+                    display: 'Bullet Points'
                     listable: hidden
                     instructions_position: above
                     visibility: visible
@@ -91,7 +91,7 @@ fields:
                     validate:
                       - required
             call_to_action:
-              display: 'Call to action'
+              display: 'Call to Action'
               instructions: null
               icon: null
               fields:
@@ -104,7 +104,7 @@ fields:
                 -
                   import: buttons
             code_snippet:
-              display: 'Code snippet'
+              display: 'Code Snippet'
               instructions: null
               icon: null
               fields:
@@ -121,7 +121,7 @@ fields:
                     line_wrapping: true
                     antlers: false
                     type: code
-                    display: 'Code snippet'
+                    display: 'Code Snippet'
                     listable: hidden
                     instructions_position: above
                     visibility: visible
@@ -129,6 +129,131 @@ fields:
                     hide_display: false
                     validate:
                       - required
+            collections:
+              display: Collections
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: background_color
+                  field: background.background_color
+                -
+                  handle: heading_1
+                  field: heading_1.heading_1
+                -
+                  handle: description
+                  field: markdown.markdown
+                  config:
+                    display: Description
+                -
+                  handle: collections
+                  field:
+                    mode: default
+                    type: collections
+                    display: Collections
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    validate:
+                      - required
+            companies:
+              display: Companies
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: background_color
+                  field: background.background_color
+                -
+                  handle: heading_1
+                  field: heading_1.heading_1
+                -
+                  handle: description
+                  field: markdown.markdown
+                  config:
+                    display: Description
+            features:
+              display: Features
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: background_color
+                  field: background.background_color
+                -
+                  handle: heading_1
+                  field: heading_1.heading_1
+                -
+                  handle: description
+                  field: markdown.markdown
+                  config:
+                    display: Description
+                -
+                  handle: features
+                  field:
+                    collapse: false
+                    previews: true
+                    fullscreen: true
+                    sets:
+                      features:
+                        display: Features
+                        instructions: null
+                        icon: null
+                        sets:
+                          feature:
+                            display: Feature
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                handle: icon
+                                field:
+                                  max_files: 1
+                                  mode: grid
+                                  container: assets
+                                  restrict: false
+                                  allow_uploads: true
+                                  show_filename: true
+                                  show_set_alt: true
+                                  type: assets
+                                  display: Icon
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: background_color
+                                field: background.background_color
+                              -
+                                handle: heading_1
+                                field: heading_1.heading_1
+                              -
+                                handle: description
+                                field: markdown.markdown
+                                config:
+                                  display: Description
+                              -
+                                handle: link
+                                field:
+                                  collections:
+                                    - companies
+                                  type: link
+                                  display: Link
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                    type: replicator
+                    display: Features
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
             gallery:
               display: Gallery
               instructions: null
@@ -228,6 +353,101 @@ fields:
                     hide_display: false
                     validate:
                       - required
+            jobs:
+              display: Jobs
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: background_color
+                  field: background.background_color
+                -
+                  handle: heading_1
+                  field: heading_1.heading_1
+                -
+                  handle: description
+                  field: markdown.markdown
+                  config:
+                    display: Description
+                -
+                  handle: jobs
+                  field:
+                    collapse: false
+                    previews: true
+                    fullscreen: true
+                    sets:
+                      jobs:
+                        display: Jobs
+                        instructions: null
+                        icon: null
+                        sets:
+                          job:
+                            display: Job
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                handle: logo
+                                field:
+                                  max_files: 1
+                                  mode: list
+                                  container: assets
+                                  restrict: false
+                                  allow_uploads: true
+                                  show_filename: true
+                                  show_set_alt: true
+                                  type: assets
+                                  display: Logo
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: company
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: Company
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  validate:
+                                    - required
+                              -
+                                handle: position
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: Position
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: link
+                                field:
+                                  type: link
+                                  display: Link
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  collections:
+                                    - companies
+                    type: replicator
+                    display: Jobs
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
             markdown:
               display: Markdown
               instructions: null
@@ -239,8 +459,115 @@ fields:
                 -
                   handle: markdown
                   field: markdown.markdown
+            people:
+              display: People
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: background_color
+                  field: background.background_color
+                -
+                  handle: heading_1
+                  field: heading_1.heading_1
+                -
+                  handle: description
+                  field: markdown.markdown
+                  config:
+                    display: Description
+            projects:
+              display: Projects
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: background_color
+                  field: background.background_color
+                -
+                  handle: heading_1
+                  field: heading_1.heading_1
+                -
+                  handle: description
+                  field: markdown.markdown
+                  config:
+                    display: Description
+                -
+                  handle: projects
+                  field:
+                    collapse: false
+                    previews: true
+                    fullscreen: true
+                    sets:
+                      projects:
+                        display: Projects
+                        instructions: null
+                        icon: null
+                        sets:
+                          project:
+                            display: Project
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                handle: logo
+                                field:
+                                  max_files: 1
+                                  mode: grid
+                                  container: assets
+                                  restrict: false
+                                  allow_uploads: true
+                                  show_filename: true
+                                  show_set_alt: true
+                                  type: assets
+                                  display: Logo
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: background_color
+                                field: background.background_color
+                              -
+                                handle: project
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: Project
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  validate:
+                                    - required
+                              -
+                                handle: description
+                                field: markdown.markdown
+                                config:
+                                  display: Description
+                              -
+                                handle: link
+                                field:
+                                  collections:
+                                    - pages
+                                  type: link
+                                  display: Link
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                    type: replicator
+                    display: Projects
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
             skill_bar:
-              display: 'Skill bar'
+              display: 'Skill Bar'
               instructions: null
               icon: null
               fields:
@@ -348,6 +675,202 @@ fields:
                                     - required
                     type: replicator
                     display: Skills
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    validate:
+                      - required
+            tags:
+              display: Tags
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: background_color
+                  field: background.background_color
+                -
+                  handle: heading_1
+                  field: heading_1.heading_1
+                -
+                  handle: description
+                  field: markdown.markdown
+                  config:
+                    display: Description
+                -
+                  handle: tags
+                  field:
+                    type: list
+                    display: Tags
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    validate:
+                      - required
+            taxonomy_terms:
+              display: 'Taxonomy Terms'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: background_color
+                  field: background.background_color
+                -
+                  handle: heading_1
+                  field: heading_1.heading_1
+                -
+                  handle: description
+                  field: markdown.markdown
+                  config:
+                    display: Description
+                -
+                  handle: taxonomy_terms
+                  field:
+                    mode: default
+                    create: true
+                    type: terms
+                    display: 'Taxonomy Terms'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    validate:
+                      - required
+            timeline:
+              display: Timeline
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: background_color
+                  field: background.background_color
+                -
+                  handle: heading_1
+                  field: heading_1.heading_1
+                -
+                  handle: description
+                  field: markdown.markdown
+                  config:
+                    display: Description
+                -
+                  handle: entries
+                  field:
+                    collapse: false
+                    previews: true
+                    fullscreen: true
+                    sets:
+                      entries:
+                        display: Entries
+                        instructions: null
+                        icon: null
+                        sets:
+                          entry:
+                            display: Entry
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                handle: logo
+                                field:
+                                  max_files: 1
+                                  mode: grid
+                                  container: assets
+                                  restrict: false
+                                  allow_uploads: true
+                                  show_filename: true
+                                  show_set_alt: true
+                                  type: assets
+                                  display: Logo
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: company
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: Company
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  validate:
+                                    - required
+                              -
+                                handle: slogan_branch
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: 'Slogan / Branch'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: position
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: Position
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: time
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: Time
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: link
+                                field:
+                                  collections:
+                                    - companies
+                                  type: link
+                                  display: Link
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                    type: replicator
+                    display: Entries
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    validate:
+                      - required
+            video:
+              display: Video
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: video
+                  field:
+                    type: video
+                    display: Video
                     listable: hidden
                     instructions_position: above
                     visibility: visible

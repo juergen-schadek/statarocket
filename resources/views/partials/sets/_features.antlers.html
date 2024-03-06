@@ -1,0 +1,54 @@
+<div class="mb-12 space-y-4">
+    {{ if heading_1 }}
+        <h2
+            id="features"
+            class="anchor text-2xl font-bold tracking-tight text-heading dark:text-heading-inverted sm:text-3xl lg:text-4xl"
+        >
+            {{ heading_1 }}
+        </h2>
+    {{ /if }}
+    {{ if description }}
+        <div
+            class="{{ settings:typography }} prose max-w-4xl text-justify dark:prose-invert"
+        >
+            {{ description }}
+        </div>
+    {{ /if }}
+</div>
+<div class="grid grid-cols-1 gap-12 text-center sm:grid-cols-2 lg:grid-cols-3">
+    {{ features }}
+        <div class="pt-6">
+            <div
+                class="relative flow-root h-full rounded-lg bg-element px-6 pb-8 shadow dark:bg-dark-element"
+            >
+                <div class="{{ if icon }} -mt-6 {{ /if }}">
+                    {{ if icon }}
+                        <div>
+                            <span
+                                class="{{ background_color ?? "bg-primary" }} inline-flex items-center justify-center rounded-xl p-3"
+                            >
+                                {{ svg :src="icon" class="h-8 w-8 text-white" }}
+                            </span>
+                        </div>
+                    {{ /if }}
+                    <h3
+                        class="mt-8 text-lg font-semibold leading-8 tracking-tight text-heading dark:text-heading-inverted"
+                    >
+                        <a class="focus:outline-none" href="{{ link }}">
+                            <span
+                                class="absolute inset-0"
+                                aria-hidden="true"
+                            ></span>
+                            {{ heading_1 }}
+                        </a>
+                    </h3>
+                    <div
+                        class="{{ settings:typography }} prose mt-5 max-w-full text-text-muted dark:prose-invert"
+                    >
+                        {{ description }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{ /features }}
+</div>
