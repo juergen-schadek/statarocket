@@ -6,3 +6,4 @@ email:
     to: test@test.com
     reply_to: '{{ email }}'
     subject: 'New message from StataRocket'
+    text: contact_text
