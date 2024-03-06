@@ -5,19 +5,19 @@
             class="container mx-auto max-w-screen-xl px-4 pb-4 sm:px-6 lg:px-8"
         >
             <h1
-                class="text-heading dark:text-heading-inverted mb-6 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl"
+                class="mb-6 text-3xl font-extrabold tracking-tight text-heading dark:text-heading-inverted sm:text-4xl lg:text-5xl"
             >
                 {{ title }}
             </h1>
             {{ if subtitle }}
                 <h2
-                    class="text-heading dark:text-heading-inverted mb-6 text-2xl font-medium tracking-tight sm:text-3xl lg:text-4xl"
+                    class="mb-6 text-2xl font-medium tracking-tight text-heading dark:text-heading-inverted sm:text-3xl lg:text-4xl"
                 >
                     {{ subtitle }}
                 </h2>
             {{ /if }}
             <div class="flex">
-                <hr class="border-primary mb-4 w-24 border-t-4" />
+                <hr class="mb-4 w-24 border-t-4 border-primary" />
             </div>
             {{ partial:breadcrumbs }}
         </div>

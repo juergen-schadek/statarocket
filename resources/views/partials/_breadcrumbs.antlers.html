@@ -1,7 +1,7 @@
 <nav class="mb-4 flex" aria-label="Breadcrumb">
     <ol
         role="list"
-        class="bg-element dark:bg-dark-element flex space-x-4 rounded-md px-6 shadow"
+        class="flex space-x-4 rounded-md bg-element px-6 shadow dark:bg-dark-element"
     >
         <li class="flex">
             <div class="flex items-center">
@@ -27,13 +27,13 @@
                         <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
                     </svg>
                     {{ if is_current }}
-                        <span class="text-text-muted ml-4 text-sm font-medium">
+                        <span class="ml-4 text-sm font-medium text-text-muted">
                             {{ title }}
                         </span>
                     {{ else }}
                         <a
                             href="{{ url }}"
-                            class="text-text-muted hover:text-primary ml-4 text-sm font-medium"
+                            class="ml-4 text-sm font-medium text-text-muted hover:text-primary"
                         >
                             {{ title }}
                         </a>

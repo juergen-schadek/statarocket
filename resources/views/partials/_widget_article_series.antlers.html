@@ -2,24 +2,27 @@
     <h3
         class="text-sm font-semibold leading-6 text-heading dark:text-heading-inverted"
     >
-        {{ svg src="/assets/icons/outline/list-bullet" class="inline-flex h-6
-        w-6 text-primary" }}
+        {{ svg src="/assets/icons/outline/list-bullet" class="inline-flex h-6 w-6 text-primary" }}
         <span class="ml-1">Artikelserien</span>
     </h3>
-    {{ taxonomy:article_series as="terms" }} {{ if !no_results }}
-    <div class="mt-6 flex flex-col gap-y-2">
-        {{ terms }}
-        <a href="/blog{{ url }}">
-            <div class="flex items-center gap-x-3">
-                <span class="flex-auto truncate"> {{ title }} </span>
-                <span
-                    class="text-muted flex-none rounded-full bg-element px-3 py-0.5 text-xs dark:bg-dark-element"
-                >
-                    {{ entries_count }}
-                </span>
+    {{ taxonomy:article_series as="terms" }}
+        {{ if !no_results }}
+            <div class="mt-6 flex flex-col gap-y-2">
+                {{ terms }}
+                    <a href="/blog{{ url }}">
+                        <div class="flex items-center gap-x-3">
+                            <span class="flex-auto truncate">
+                                {{ title }}
+                            </span>
+                            <span
+                                class="text-muted flex-none rounded-full bg-element px-3 py-0.5 text-xs dark:bg-dark-element"
+                            >
+                                {{ entries_count }}
+                            </span>
+                        </div>
+                    </a>
+                {{ /terms }}
             </div>
-        </a>
-        {{ /terms }}
-    </div>
-    {{ /if }} {{ /taxonomy:article_series }}
+        {{ /if }}
+    {{ /taxonomy:article_series }}
 </div>
