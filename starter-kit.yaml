@@ -1,10 +1,5 @@
 export_paths:
-  - content/collections
-  - content/globals
-  - content/navigation
-  - content/taxonomies
-  - content/trees
-  - content/seo.yaml
+  - content
   - public/assets
   - resources/blueprints/collections
   - resources/blueprints/forms
