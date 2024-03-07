@@ -16,7 +16,7 @@
             {{ /social_links }}
         </div>
     {{ /if }}
-{{ elseif settings:social_links or settings:rss_feed }}
+{{ elseif settings:social_links or settings:meta_informations_rss_feed }}
     <!-- Social Media -->
     <div
         class="{{ if class }} {{ class }} {{ else }} flex items-center justify-center gap-x-4 py-4 {{ /if }}"
@@ -31,10 +31,10 @@
                 {{ svg :src="icon" class="h-4 w-4" }}
             </a>
         {{ /settings:social_links }}
-        {{ if settings:rss_feed }}
+        {{ if settings:meta_informations_rss_feed }}
             <a
                 class="{{ if class_items }} {{ class_items }} {{ else }} {{ icon:icon_color }} {{ /if }}"
-                href="{{ site:permalink }}{{ settings:rss_feed }}"
+                href="{{ site:permalink }}{{ settings:meta_informations_rss_feed }}"
                 target="_blank"
             >
                 <span class="sr-only">RSS-Feed</span>

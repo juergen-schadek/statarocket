@@ -17,7 +17,9 @@
 </div>
 {{ collection:companies title:isnt="AVAL AG" as="companies" }}
     {{ if no_results }}
-        <p class="font-semibold">Sorry, es wurden keine Einträge gefunden!</p>
+        <p class="font-semibold">
+            {{ trans:statarocket.no_entries_found }}
+        </p>
     {{ else }}
         <div
             class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"

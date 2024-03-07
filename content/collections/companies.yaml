@@ -3,7 +3,7 @@ template: companies/show
 layout: layout
 mount: b69a26a4-ed7d-4f3a-9dcb-04d4e8580820
 revisions: false
-route: 'companies/{slug}'
+route: '/{mount}/{slug}'
 sort_dir: asc
 date_behavior:
   past: public

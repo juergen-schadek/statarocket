@@ -7,7 +7,7 @@ taxonomies:
   - playlists
   - tags
 revisions: false
-route: 'videos/{slug}'
+route: '/{mount}/{slug}'
 date: true
 sort_dir: desc
 date_behavior:

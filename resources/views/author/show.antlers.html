@@ -4,10 +4,11 @@
         <div
             class="container mx-auto max-w-screen-xl px-4 pb-4 sm:px-6 lg:px-8"
         >
+            <!-- prettier-ignore -->
             <h1
                 class="mb-6 text-3xl font-extrabold tracking-tight text-heading dark:text-heading-inverted sm:text-4xl lg:text-5xl"
             >
-                Autor: {{ name }}
+                {{ trans:statarocket.author }}: {{ name }}
             </h1>
             <div class="flex">
                 <hr class="mb-4 w-24 border-t-4 border-primary" />
@@ -30,10 +31,10 @@
         >
             <div class="flex flex-col lg:flex-row">
                 <section class="w-full lg:w-9/12">
-                    {{ collection from="blog|videos" :author="user['id']" paginate="6" sort="date:desc" as="entries" }}
+                    {{ collection from="blog|videos" :author:is="id" paginate="6" sort="date:desc" as="entries" }}
                         {{ if no_results }}
                             <p class="font-semibold">
-                                Sorry, es wurden keine Einträge gefunden!
+                                {{ trans:statarocket.no_entries_found }}
                             </p>
                         {{ else }}
                             <div class="grid grid-cols-1 gap-4 md:grid-cols-2">

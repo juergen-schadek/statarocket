@@ -3,14 +3,17 @@
     <title>{{ settings:site_title | sanitize }}</title>
     <subtitle>{{ settings:site_description | sanitize }}</subtitle>
     <link href="{{ site:permalink }}" />
-    <link href="{{ site:permalink }}{{ settings:rss_feed }}" rel="self" />
-    {{ collection:blog limit="1" }}
+    <link
+        href="{{ site:permalink }}{{ settings:meta_informations_rss_feed }}"
+        rel="self"
+    />
+    {{ collection from="blog|videos" limit="1" }}
     <updated>{{ date format="c" }}</updated>
-    {{ /collection:blog }}
+    {{ /collection }}
     <author>
         <name>{{ settings:site_author | sanitize }}</name>
     </author>
-    <id>{{ site:permalink }}{{ settings:rss_feed }}</id>
+    <id>{{ site:permalink }}{{ settings:meta_informations_rss_feed }}</id>
 
     {{ template_content }}
 </feed>

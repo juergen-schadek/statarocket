@@ -46,11 +46,21 @@
                                                 {{ title }}
                                             </a>
                                         </p>
-                                        <p
-                                            class="mt-1 flex max-w-xl text-sm leading-5"
-                                        >
-                                            {{ content | raw | bard_text }}
-                                        </p>
+                                        {{ content }}
+                                            {{ if type == "text" }}
+                                                <div
+                                                    class="{{ settings:typography }} prose mt-1 flex max-w-xl text-sm leading-5 dark:prose-invert"
+                                                >
+                                                    {{ text }}
+                                                </div>
+                                            {{ elseif type == "markdown" }}
+                                                <div
+                                                    class="{{ settings:typography }} prose mt-1 flex max-w-xl text-sm leading-5 dark:prose-invert"
+                                                >
+                                                    {{ markdown }}
+                                                </div>
+                                            {{ /if }}
+                                        {{ /content }}
                                     </div>
                                 </div>
                                 <div class="flex shrink-0 items-center gap-x-4">

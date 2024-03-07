@@ -1,11 +1,12 @@
 <!-- Theme picker -->
 <div class="relative">
-    <label class="sr-only">Theme</label>
+    <label class="sr-only">{{ trans:statarocket.theme }}</label>
     <button
         @click="themePickerOpen = ! themePickerOpen"
         role="button"
         class="flex h-6 w-6 items-center justify-center rounded-lg bg-themepicker-icon-bg shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-dark-themepicker-icon-bg dark:ring-inset dark:ring-white/5"
         :aria-expanded="themePickerOpen"
+        aria-label="{{ trans:statarocket.theme }}"
     >
         <span
             :class="themePreference != 'system' ? 'fill-primary' : 'fill-themepicker-icon'"
@@ -48,7 +49,7 @@
                     {{ svg src="assets/icons/light-mode" class="h-4 w-4 dark:fill-themepicker-icon" }}
                 </span>
             </div>
-            <div class="ml-3">Light</div>
+            <div class="ml-3">{{ trans:statarocket.light }}</div>
         </li>
         <li
             @click="setThemePreference('dark'); themePickerOpen = false"
@@ -65,7 +66,7 @@
                     {{ svg src="assets/icons/dark-mode" class="h-4 w-4" }}
                 </span>
             </div>
-            <div class="ml-3">Dark</div>
+            <div class="ml-3">{{ trans:statarocket.dark }}</div>
         </li>
         <li
             @click="setThemePreference('system'); themePickerOpen = false"
@@ -82,7 +83,7 @@
                     {{ svg src="assets/icons/system-mode" class="h-4 w-4" }}
                 </span>
             </div>
-            <div class="ml-3">System</div>
+            <div class="ml-3">{{ trans:statarocket.system }}</div>
         </li>
     </ul>
 </div>

@@ -1,19 +1,22 @@
 <div
     class="mt-8 flex items-center justify-between border-t border-slate-200 py-3"
 >
-    <div class="flex flex-1 justify-between sm:hidden" aria-label="Pagination">
+    <div
+        class="flex flex-1 justify-between sm:hidden"
+        aria-label="{{ trans:statarocket.pagination }}"
+    >
         {{ if prev_page }}
             <a
                 href="{{ prev_page }}"
                 class="relative inline-flex items-center rounded-md border border-slate-300 bg-menu-bg px-4 py-2 text-sm font-medium text-text-muted hover:bg-menu-text-bg-hover dark:border-slate-800 dark:bg-dark-element dark:hover:bg-dark-menu-text-bg-hover"
             >
-                vorherige Seite
+                {{ trans:statarocket.previous_page }}
             </a>
         {{ else }}
             <span
                 class="relative inline-flex items-center rounded-md border border-slate-300 bg-menu-bg px-4 py-2 text-sm font-medium text-text-muted dark:border-slate-800 dark:bg-dark-element"
             >
-                vorherige Seite
+                {{ trans:statarocket.previous_page }}
             </span>
         {{ /if }}
         {{ if next_page }}
@@ -21,48 +24,44 @@
                 href="{{ next_page }}"
                 class="relative ml-3 inline-flex items-center rounded-md border border-slate-300 bg-menu-bg px-4 py-2 text-sm font-medium text-text-muted hover:bg-menu-text-bg-hover dark:border-slate-800 dark:bg-dark-element dark:hover:bg-dark-menu-text-bg-hover"
             >
-                nächste Seite
+                {{ trans:statarocket.next_page }}
             </a>
         {{ else }}
             <span
                 class="relative inline-flex items-center rounded-md border border-slate-300 bg-menu-bg px-4 py-2 text-sm font-medium text-text-muted dark:border-slate-800 dark:bg-dark-element"
             >
-                nächste Seite
+                {{ trans:statarocket.next_page }}
             </span>
         {{ /if }}
     </div>
     <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
         <div>
             <p class="text-sm text-text-muted">
-                {{ if total_items === 1 }}
-                    Es wurde
-                    <span class="font-medium">{{ total_items }}</span>
-                    Eintrag gefunden.
-                {{ else }}
-                    Es wurden
-                    <span class="font-medium">{{ total_items }}</span>
-                    Einträge gefunden.
-                {{ /if }}
+                {{ trans_choice:statarocket.entries_count :count="total_items" }}
             </p>
         </div>
         <div>
             <nav
                 class="isolate inline-flex -space-x-px rounded-md shadow-sm"
-                aria-label="Pagination"
+                aria-label="{{ trans:statarocket.pagination }}"
             >
                 {{ if prev_page }}
                     <a
                         href="{{ prev_page }}"
                         class="relative inline-flex items-center rounded-l-md bg-menu-bg px-2 py-2 text-text-muted ring-1 ring-inset ring-black/5 hover:bg-menu-text-bg-hover focus:z-20 focus:outline-offset-0 dark:bg-dark-menu-bg dark:ring-white/5 dark:hover:bg-dark-menu-text-bg-hover"
                     >
-                        <span class="sr-only">vorherige Seite</span>
+                        <span class="sr-only">
+                            {{ trans:statarocket.previous_page }}
+                        </span>
                         {{ svg src="/assets/icons/outline/chevron-left" class="h-4 w-4" }}
                     </a>
                 {{ else }}
                     <span
                         class="relative inline-flex items-center rounded-l-md bg-menu-bg px-2 py-2 text-text-muted ring-1 ring-inset ring-black/5 focus:z-20 focus:outline-offset-0 dark:bg-dark-menu-bg dark:ring-white/5"
                     >
-                        <span class="sr-only">vorherige Seite</span>
+                        <span class="sr-only">
+                            {{ trans:statarocket.previous_page }}
+                        </span>
                         {{ svg src="/assets/icons/outline/chevron-left" class="h-4 w-4" }}
                     </span>
                 {{ /if }}
@@ -135,14 +134,18 @@
                         href="{{ next_page }}"
                         class="relative inline-flex items-center rounded-r-md bg-menu-bg px-2 py-2 text-text-muted ring-1 ring-inset ring-black/5 hover:bg-menu-text-bg-hover focus:z-20 focus:outline-offset-0 dark:bg-dark-menu-bg dark:ring-white/5 dark:hover:bg-dark-menu-text-bg-hover"
                     >
-                        <span class="sr-only">nächste Seite</span>
+                        <span class="sr-only">
+                            {{ trans:statarocket.next_page }}
+                        </span>
                         {{ svg src="/assets/icons/outline/chevron-right" class="h-4 w-4" }}
                     </a>
                 {{ else }}
                     <span
                         class="relative inline-flex items-center rounded-r-md bg-menu-bg px-2 py-2 text-text-muted ring-1 ring-inset ring-black/5 focus:z-20 focus:outline-offset-0 dark:bg-dark-menu-bg dark:ring-white/5"
                     >
-                        <span class="sr-only">nächste Seite</span>
+                        <span class="sr-only">
+                            {{ trans:statarocket.next_page }}
+                        </span>
                         {{ svg src="/assets/icons/outline/chevron-right" class="h-4 w-4" }}
                     </span>
                 {{ /if }}

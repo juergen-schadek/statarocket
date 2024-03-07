@@ -3,7 +3,7 @@
         class="text-sm font-semibold leading-6 text-heading dark:text-heading-inverted"
     >
         {{ svg src="/assets/icons/outline/list-bullet" class="inline-flex h-6 w-6 text-primary" }}
-        <span class="ml-1">Artikelserien</span>
+        <span class="ml-1">{{ trans:statarocket.article_series }}</span>
     </h3>
     {{ taxonomy:article_series as="terms" }}
         {{ if !no_results }}

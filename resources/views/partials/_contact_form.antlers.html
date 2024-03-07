@@ -43,7 +43,7 @@
                             for="name"
                             class="block text-sm font-semibold text-text-muted"
                         >
-                            Name
+                            {{ trans:statarocket.contact_form_label_name }}
                         </label>
                         <div class="mt-2.5">
                             <input
@@ -61,7 +61,7 @@
                             for="email"
                             class="block text-sm font-semibold text-text-muted"
                         >
-                            E-Mail
+                            {{ trans:statarocket.contact_form_label_email }}
                         </label>
                         <div class="mt-2.5">
                             <input
@@ -79,7 +79,7 @@
                             for="comment"
                             class="block text-sm font-semibold text-text-muted"
                         >
-                            Message
+                            {{ trans:statarocket.contact_form_label_comment }}
                         </label>
                         <div class="mt-2.5">
                             <textarea
@@ -103,15 +103,7 @@
                                 />
                             </div>
                             <label class="font-semibold text-text-muted">
-                                I have read the
-                                <a
-                                    class="font-medium underline"
-                                    href="/privacy-policy"
-                                    target="_blank"
-                                >
-                                    Privacy Policy
-                                </a>
-                                and agree with it.
+                                {{ trans:statarocket.contact_form_label_privacy }}
                             </label>
                         </div>
                     </div>
@@ -126,7 +118,7 @@
                             type="submit"
                             class="flex w-full items-center justify-center rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-heading-inverted shadow-sm hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                         >
-                            Send
+                            {{ trans:statarocket.contact_form_button_send }}
                             {{ svg src="assets/icons/solid/arrow-long-right" class="ml-3 h-5 5 w-5" }}
                         </button>
                     </div>

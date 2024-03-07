@@ -25,7 +25,7 @@
                 {{ collection:blog paginate="6" sort="date:desc" as="posts" }}
                     {{ if no_results }}
                         <p class="font-semibold">
-                            Sorry, es wurden keine Einträge gefunden!
+                            {{ trans:statarocket.no_entries_found }}
                         </p>
                     {{ else }}
                         <div class="grid grid-cols-1 gap-4 md:grid-cols-2">

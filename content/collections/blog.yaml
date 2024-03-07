@@ -7,7 +7,7 @@ taxonomies:
   - categories
   - tags
 revisions: false
-route: 'blog/{slug}'
+route: '/{mount}/{slug}'
 date: true
 sort_dir: desc
 date_behavior:

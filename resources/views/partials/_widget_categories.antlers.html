@@ -3,7 +3,7 @@
         class="text-sm font-semibold leading-6 text-heading dark:text-heading-inverted"
     >
         {{ svg src="/assets/icons/outline/folder" class="inline-flex h-6 w-6 text-primary" }}
-        <span class="ml-1">Kategorien</span>
+        <span class="ml-1">{{ trans:statarocket.categories }}</span>
     </h3>
     {{ taxonomy:categories as="terms" }}
         {{ if !no_results }}

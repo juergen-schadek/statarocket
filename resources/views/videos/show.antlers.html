@@ -43,7 +43,7 @@
                             {{ author }}
                                 <img
                                     class="h-10 w-10 rounded-full"
-                                    src="{{ glide:avatar width="40" }}"
+                                    src="{{ glide:avatar width="40" height="40" }}"
                                     alt="{{ name }}"
                                 />
                             {{ /author }}
@@ -67,7 +67,7 @@
                             <span aria-hidden="true">&middot;</span>
                             <span>
                                 {{ duration }}
-                                Dauer
+                                {{ trans:statarocket.duration }}
                             </span>
                         </div>
                     </div>
@@ -85,49 +85,6 @@
                             </a>
                         {{ /tags }}
                     </p>
-                {{ /if }}
-                {{ if related_entries }}
-                    <ul role="list" class="mt-8">
-                        <li
-                            class="overflow-hidden rounded-xl border border-slate-200 bg-element dark:bg-dark-element"
-                        >
-                            <div
-                                class="flex items-center gap-x-4 border-b border-slate-900/5 bg-slate-50 p-6 dark:bg-slate-900"
-                            >
-                                {{ svg src="/assets/icons/outline/list-bullet" class="h-12 w-12 p-2 flex-none rounded-lg bg-element text-primary dark:bg-dark-element object-cover ring-1 ring-slate-900/10 dark:ring-white/10" }}
-                                <h3
-                                    class="text-sm font-medium leading-6 text-heading dark:text-heading-inverted"
-                                >
-                                    Ähnliche Einträge
-                                </h3>
-                            </div>
-                            <dl
-                                class="-my-3 divide-y divide-slate-200 px-6 py-4 text-sm leading-6"
-                            >
-                                {{ related_entries }}
-                                    <div class="flex gap-x-4 py-3">
-                                        <div class="flex-shrink-0">
-                                            <a href="{{ url }}">
-                                                <span class="sr-only">
-                                                    {{ title }}
-                                                </span>
-                                                {{ if collection == "blog" }}
-                                                    {{ svg src="/assets/icons/outline/newspaper" class="inline-flex h-6 w-6 text-text-muted" }}
-                                                {{ elseif collection == "videos" }}
-                                                    {{ svg src="/assets/icons/outline/video-camera" class="inline-flex h-6 w-6 text-text-muted" }}
-                                                {{ /if }}
-                                            </a>
-                                        </div>
-                                        <dt class="flex-1">
-                                            <a href="{{ url }}">
-                                                {{ title }}
-                                            </a>
-                                        </dt>
-                                    </div>
-                                {{ /related_entries }}
-                            </dl>
-                        </li>
-                    </ul>
                 {{ /if }}
                 {{ if playlists }}
                     <ul role="list" class="mt-8">
@@ -178,25 +135,70 @@
                         </li>
                     </ul>
                 {{ /if }}
+                {{ if related_entries }}
+                    <ul role="list" class="mt-8">
+                        <li
+                            class="overflow-hidden rounded-xl border border-slate-200 bg-element dark:bg-dark-element"
+                        >
+                            <div
+                                class="flex items-center gap-x-4 border-b border-slate-900/5 bg-slate-50 p-6 dark:bg-slate-900"
+                            >
+                                {{ svg src="/assets/icons/outline/list-bullet" class="h-12 w-12 p-2 flex-none rounded-lg bg-element text-primary dark:bg-dark-element object-cover ring-1 ring-slate-900/10 dark:ring-white/10" }}
+                                <h3
+                                    class="text-sm font-medium leading-6 text-heading dark:text-heading-inverted"
+                                >
+                                    {{ trans:statarocket.related_entries }}
+                                </h3>
+                            </div>
+                            <dl
+                                class="-my-3 divide-y divide-slate-200 px-6 py-4 text-sm leading-6"
+                            >
+                                {{ related_entries }}
+                                    <div class="flex gap-x-4 py-3">
+                                        <div class="flex-shrink-0">
+                                            <a href="{{ url }}">
+                                                <span class="sr-only">
+                                                    {{ title }}
+                                                </span>
+                                                {{ if collection == "blog" }}
+                                                    {{ svg src="/assets/icons/outline/newspaper" class="inline-flex h-6 w-6 text-text-muted" }}
+                                                {{ elseif collection == "videos" }}
+                                                    {{ svg src="/assets/icons/outline/video-camera" class="inline-flex h-6 w-6 text-text-muted" }}
+                                                {{ /if }}
+                                            </a>
+                                        </div>
+                                        <dt class="flex-1">
+                                            <a href="{{ url }}">
+                                                {{ title }}
+                                            </a>
+                                        </dt>
+                                    </div>
+                                {{ /related_entries }}
+                            </dl>
+                        </li>
+                    </ul>
+                {{ /if }}
                 <nav
                     class="mt-8 flex items-start justify-between space-x-4 border-t border-slate-200 py-3 dark:border-slate-800"
-                    aria-label="Pagination"
+                    aria-label="{{ trans:statarocket.pagination }}"
                 >
                     {{ collection:previous in="videos" limit="1" sort="date:asc" }}
                         {{ if no_results }}
                             <span
                                 class="relative rounded-md border border-slate-300 bg-menu-bg px-4 py-2 text-sm font-medium text-text-muted dark:border-slate-800 dark:bg-dark-element"
                             >
-                                vorheriges Video
+                                {{ trans:statarocket.previous_video }}
                                 <br />
-                                <small>Dies ist das älteste Video.</small>
+                                <small>
+                                    {{ trans:statarocket.oldest_video }}
+                                </small>
                             </span>
                         {{ else }}
                             <a
                                 class="relative rounded-md border border-slate-300 bg-menu-bg px-4 py-2 text-sm font-medium text-text-muted hover:bg-menu-text-bg-hover dark:border-slate-800 dark:bg-dark-element dark:hover:bg-dark-menu-text-bg-hover"
                                 href="{{ url }}"
                             >
-                                vorheriges Video
+                                {{ trans:statarocket.previous_video }}
                                 <br />
                                 <small>{{ title }}</small>
                             </a>
@@ -207,16 +209,18 @@
                             <span
                                 class="relative rounded-md border border-slate-300 bg-menu-bg px-4 py-2 text-sm font-medium text-text-muted dark:border-slate-800 dark:bg-dark-element"
                             >
-                                nächstes Video
+                                {{ trans:statarocket.next_video }}
                                 <br />
-                                <small>Dies ist das neueste Video.</small>
+                                <small>
+                                    {{ trans:statarocket.newest_video }}
+                                </small>
                             </span>
                         {{ else }}
                             <a
                                 class="relative rounded-md border border-slate-300 bg-menu-bg px-4 py-2 text-sm font-medium text-text-muted hover:bg-menu-text-bg-hover dark:border-slate-800 dark:bg-dark-element dark:hover:bg-dark-menu-text-bg-hover"
                                 href="{{ url }}"
                             >
-                                nächstes Video
+                                {{ trans:statarocket.next_video }}
                                 <br />
                                 <small>{{ title }}</small>
                             </a>
