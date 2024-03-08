@@ -168,17 +168,6 @@ tabs:
       -
         fields:
           -
-            handle: header_full_height
-            field:
-              default: false
-              type: toggle
-              display: 'Full height'
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-          -
             handle: header_show_site_title
             field:
               default: false

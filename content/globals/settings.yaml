@@ -49,7 +49,6 @@ data:
     {{ svg src="/assets/icons/outline/code-bracket" class="inline-flex h-4 w-4" }} with {{ svg src="/assets/icons/outline/heart" class="inline-flex h-4 w-4" }} from Jürgen Schadek and {{ svg src="/assets/icons/outline/lifebuoy" class="inline-flex h-4 w-4" }} from Statamic and Tailwind CSS.<br />
     &copy; {{ date format="Y" }} Jürgen Schadek. All rights reserved.
   meta_informations_rss_feed: /feed/
-  header_full_height: true
   header_show_site_title: true
   header_top_bar_text: 'Write us an email: <a href="mailto:info@xyz.com">info@xyz.com</a>'
   button_1_text: Docs

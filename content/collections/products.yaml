@@ -1,0 +1,21 @@
+title: Products
+template: default
+layout: layout
+mount: ac617c5f-bb0c-4f1e-a4ac-f394f31375b9
+revisions: false
+route: '/{mount}/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true
+inject:
+  seo:
+    description: '@seo:excerpt'
+structure:
+  root: false
+  max_depth: 1

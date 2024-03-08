@@ -1,4 +1,4 @@
-title: 'Page with hero'
+title: Product
 tabs:
   main:
     display: Main
@@ -32,6 +32,11 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+          -
+            handle: excerpt
+            field: markdown.markdown
+            config:
+              display: Excerpt
           -
             handle: content
             field: bard.content
@@ -82,6 +87,26 @@ tabs:
               show_regenerate: true
               hide_display: false
           -
+            handle: product_image
+            field:
+              max_files: 1
+              mode: grid
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Product Image'
+              listable: true
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: background_color
+            field: background.background_color
+          -
             handle: featured_image
             field:
               max_files: 1
@@ -98,92 +123,6 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
-          -
-            handle: parent
-            field:
-              type: entries
-              collections:
-                - pages
-              max_items: 1
-              listable: false
-              localizable: true
-              display: Parent
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              mode: default
-              create: true
-              hide_display: false
-  hero:
-    display: Hero
-    sections:
-      -
-        fields:
-          -
-            handle: hero_full_height
-            field:
-              default: false
-              type: toggle
-              display: 'Full height'
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-          -
-            handle: hero_title
-            field:
-              input_type: text
-              antlers: false
-              type: text
-              display: Title
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-          -
-            handle: hero_subtitle
-            field:
-              input_type: text
-              antlers: false
-              type: text
-              display: Subtitle
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-          -
-            handle: hero_text
-            field:
-              antlers: false
-              type: textarea
-              display: Text
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-          -
-            handle: hero_background
-            field:
-              max_files: 1
-              mode: grid
-              container: assets
-              restrict: false
-              allow_uploads: true
-              show_filename: true
-              show_set_alt: true
-              type: assets
-              display: Background
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-          -
-            import: buttons
   SEO:
     display: SEO
     sections:

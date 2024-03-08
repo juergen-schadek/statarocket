@@ -1,6 +1,6 @@
 <!-- Container for Header and Hero -->
 <div
-    class="{{ if settings:header_full_height and blueprint == "page_with_hero" }} min-h-screen {{ /if }} relative flex flex-col pt-[108px]"
+    class="{{ if blueprint == "page_with_hero" and hero_full_height }} min-h-screen {{ /if }} relative flex flex-col pt-[108px]"
 >
     <!-- Header -->
     <div class="fixed left-0 right-0 top-0 z-10 bg-header dark:bg-dark-header">
