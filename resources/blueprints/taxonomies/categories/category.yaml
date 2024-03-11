@@ -21,6 +21,11 @@ tabs:
               antlers: false
               hide_display: false
           -
+            handle: excerpt
+            field: markdown.markdown
+            config:
+              display: Excerpt
+          -
             handle: content
             field: bard.content
   sidebar:
