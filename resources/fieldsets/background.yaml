@@ -14,7 +14,7 @@ fields:
         bg-slate-100: Slate
         bg-white: White
         bg-yellow-50: Yellow
-      taggable: false
+      taggable: true
       push_tags: false
       multiple: false
       max_items: 1

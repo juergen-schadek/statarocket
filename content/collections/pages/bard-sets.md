@@ -3,7 +3,7 @@ id: 23fb9a54-34c2-491f-b70c-ff959685cf05
 blueprint: page
 title: 'Bard Sets'
 updated_by: 075692b5-b33a-4310-a2bb-73666e5899c1
-updated_at: 1709727468
+updated_at: 1710250123
 subtitle: 'Demo of the Bard Sets'
 content:
   -
@@ -34,6 +34,15 @@ content:
         button_1_link: '#'
         button_2_text: 'Do something else'
         button_2_link: '#'
+  -
+    type: set
+    attrs:
+      id: ltoer162
+      values:
+        type: category_items
+        background_color: bg-pink-50
+        heading_1: 'Category Items'
+        category: category-1
   -
     type: set
     attrs:

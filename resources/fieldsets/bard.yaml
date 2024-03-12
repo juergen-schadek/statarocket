@@ -103,6 +103,39 @@ fields:
                   field: heading_1.heading_1
                 -
                   import: buttons
+            category_items:
+              display: 'Category Items'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: background_color
+                  field: background.background_color
+                -
+                  handle: heading_1
+                  field: heading_1.heading_1
+                -
+                  handle: description
+                  field: markdown.markdown
+                  config:
+                    display: Description
+                -
+                  handle: category
+                  field:
+                    max_items: 1
+                    mode: select
+                    create: false
+                    taxonomies:
+                      - categories
+                    type: terms
+                    display: Category
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    validate:
+                      - required
             code_snippet:
               display: 'Code Snippet'
               instructions: null
@@ -758,9 +791,7 @@ fields:
                       - required
                     taxonomies:
                       - article_series
-                      - categories
                       - playlists
-                      - tags
             timeline:
               display: Timeline
               instructions: null
