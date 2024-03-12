@@ -3,7 +3,7 @@ id: 23fb9a54-34c2-491f-b70c-ff959685cf05
 blueprint: page
 title: 'Bard Sets'
 updated_by: 075692b5-b33a-4310-a2bb-73666e5899c1
-updated_at: 1710250123
+updated_at: 1710260002
 subtitle: 'Demo of the Bard Sets'
 content:
   -
@@ -190,6 +190,19 @@ content:
           # Markdown
 
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aspernatur quisquam expedita cumque mollitia, consequatur deleniti praesentium atque tenetur reprehenderit sed amet itaque odit possimus labore vel, eius rerum, pariatur omnis obcaecati error dolor! Ut facere voluptatum molestiae aliquid. Vel id quaerat maiores fugit, inventore molestiae esse laboriosam enim ut.
+  -
+    type: set
+    attrs:
+      id: ltoj8ryx
+      values:
+        type: markdown_with_image
+        background_color: bg-slate-100
+        image: statarocket_medium.jpg
+        markdown: |-
+          # Markdown with image
+
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aspernatur quisquam expedita cumque mollitia, consequatur deleniti praesentium atque tenetur reprehenderit sed amet itaque odit possimus labore vel, eius rerum, pariatur omnis obcaecati error dolor! Ut facere voluptatum molestiae aliquid. Vel id quaerat maiores fugit, inventore molestiae esse laboriosam enim ut.
+        image_right: true
   -
     type: set
     attrs:

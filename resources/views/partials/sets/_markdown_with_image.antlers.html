@@ -1,0 +1,18 @@
+<div
+    class="grid grid-cols-1 flex-row-reverse items-start gap-x-8 gap-y-16 md:grid-cols-2"
+>
+    <div
+        class="{{ if image_right }} md:order-last {{ /if }} overflow-hidden rounded-3xl shadow-xl"
+    >
+        <img
+            class="h-full w-full object-cover"
+            src="{{ glide :src="image" width="600" }}"
+            alt="{{ image:alt }}"
+        />
+    </div>
+    <div
+        class="{{ settings:typography }} prose max-w-screen-lg dark:prose-invert"
+    >
+        {{ markdown }}
+    </div>
+</div>
