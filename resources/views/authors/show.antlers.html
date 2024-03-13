@@ -17,13 +17,30 @@
         </div>
         <section>
             <div
-                class="{{ if class }} {{ class }} {{ else }} container mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 {{ /if }}"
+                class="container mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8"
             >
-                <article
-                    class="{{ settings:typography }} prose max-w-screen-lg dark:prose-invert"
-                >
-                    {{ bio }}
-                </article>
+                <div class="flex flex-col lg:flex-row">
+                    <div class="w-full lg:w-9/12">
+                        <article
+                            class="{{ settings:typography }} prose max-w-screen-lg dark:prose-invert"
+                        >
+                            {{ bio }}
+                        </article>
+                    </div>
+                    <div
+                        class="flex w-full items-center justify-center lg:ml-8 lg:w-3/12"
+                    >
+                        {{ if avatar }}
+                            <div class="overflow-hidden rounded-full shadow-xl">
+                                <img
+                                    class="h-full w-full object-cover"
+                                    src="{{ glide :src="avatar" width="200" height="200" }}"
+                                    alt="{{ avatar:alt }}"
+                                />
+                            </div>
+                        {{ /if }}
+                    </div>
+                </div>
             </div>
         </section>
         <div

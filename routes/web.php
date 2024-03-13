@@ -22,6 +22,6 @@ Route::statamic('feed', 'feed', [
     'content_type' => 'atom',
 ]);
 
-Route::statamic('author/{author}', 'author.show', [
+Route::statamic('authors/{author}', 'authors.show', [
     'title' => 'Autor',
 ]);

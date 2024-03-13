@@ -7,11 +7,13 @@
     <updated>{{ updated_at format="c" }}</updated>
     <author>
         <name>{{ author:name | sanitize }}</name>
-        <uri>{{ site:permalink }}/author/{{ author:slug }}</uri>
+        <uri>{{ site:permalink }}/authors/{{ author:slug }}</uri>
     </author>
     <summary type="html">
         &lt;img src=&quot;{{ site:permalink
+
         }}{{ featured_image | sanitize }}&quot; alt=&quot;{{ featured_image:alt | sanitize
+
 
 
         }}&quot;&gt;&lt;br&gt;{{ excerpt | sanitize }}
