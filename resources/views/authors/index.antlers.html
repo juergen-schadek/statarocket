@@ -1,0 +1,77 @@
+{{ partial:header }}
+<main class="py-16">
+    <div class="container mx-auto max-w-screen-xl px-4 pb-4 sm:px-6 lg:px-8">
+        <h1
+            class="mb-6 text-3xl font-extrabold tracking-tight text-heading dark:text-heading-inverted sm:text-4xl lg:text-5xl"
+        >
+            {{ title }}
+        </h1>
+        {{ if subtitle }}
+            <h2
+                class="mb-6 text-2xl font-medium tracking-tight text-heading dark:text-heading-inverted sm:text-3xl lg:text-4xl"
+            >
+                {{ subtitle }}
+            </h2>
+        {{ /if }}
+        <div class="flex">
+            <hr class="mb-4 w-24 border-t-4 border-primary" />
+        </div>
+        {{ partial:breadcrumbs }}
+    </div>
+    {{ partial:bard_field }}
+    <section>
+        <div
+            class="container mx-auto max-w-screen-xl px-4 pb-16 sm:px-6 lg:px-8"
+        >
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {{ users }}
+                    <div
+                        class="relative rounded-lg bg-element px-8 py-10 shadow dark:bg-dark-element"
+                    >
+                        {{ if avatar }}
+                            <div
+                                class="relative mx-auto h-48 w-48 overflow-hidden rounded-full md:h-56 md:w-56"
+                            >
+                                <div class="absolute inset-0">
+                                    <img
+                                        src="{{ glide:avatar width="225" height="225" }}"
+                                        alt="{{ avatar:alt }}"
+                                    />
+                                    <div
+                                        class="absolute inset-0 bg-image-blend mix-blend-multiply dark:bg-dark-image-blend"
+                                    ></div>
+                                </div>
+                            </div>
+                        {{ else }}
+                            <div
+                                class="mx-auto flex h-48 w-48 items-center justify-center rounded-full bg-slate-200 md:h-56 md:w-56"
+                            >
+                                {{ svg class="h-24 w-24 text-primary" src="/assets/icons/outline/user" }}
+                            </div>
+                        {{ /if }}
+                        <h3
+                            class="mt-6 text-center text-lg font-semibold leading-8 tracking-tight text-heading dark:text-heading-inverted"
+                        >
+                            <a
+                                class="focus:outline-none"
+                                href="/authors/{{ slug }}"
+                            >
+                                <span
+                                    class="absolute inset-0"
+                                    aria-hidden="true"
+                                ></span>
+                                {{ name }}
+                            </a>
+                        </h3>
+                        <div
+                            class="{{ settings:typography }} prose mt-3 dark:prose-invert"
+                        >
+                            {{ description }}
+                        </div>
+                    </div>
+                {{ /users }}
+            </div>
+        </div>
+    </section>
+</main>
+{{ partial:footer }}

@@ -78,6 +78,11 @@ tabs:
               show_set_alt: true
               hide_display: false
           -
+            handle: description
+            field: markdown.markdown
+            config:
+              display: Description
+          -
             handle: bio
             field: markdown.markdown
             config:
