@@ -1,0 +1,30 @@
+<div class="mb-12 space-y-4">
+    {{ if heading_1 }}
+        <h2
+            id="collection"
+            class="anchor text-2xl font-bold tracking-tight text-heading dark:text-heading-inverted sm:text-3xl lg:text-4xl"
+        >
+            {{ heading_1 }}
+        </h2>
+    {{ /if }}
+    {{ if description }}
+        <div
+            class="{{ settings:typography }} prose max-w-4xl text-justify dark:prose-invert"
+        >
+            {{ description }}
+        </div>
+    {{ /if }}
+</div>
+{{ collection:testimonials products:is="{product:id}" sort="random" limit="2" as="references" }}
+    {{ if no_results }}
+        <p class="font-semibold">
+            {{ trans:statarocket.no_entries_found }}
+        </p>
+    {{ else }}
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+            {{ references }}
+                {{ partial:references }}
+            {{ /references }}
+        </div>
+    {{ /if }}
+{{ /collection:testimonials }}

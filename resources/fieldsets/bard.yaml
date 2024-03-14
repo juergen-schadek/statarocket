@@ -933,6 +933,39 @@ fields:
                     taxonomies:
                       - article_series
                       - playlists
+            testimonials:
+              display: Testimonials
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: background_color
+                  field: background.background_color
+                -
+                  handle: heading_1
+                  field: heading_1.heading_1
+                -
+                  handle: description
+                  field: markdown.markdown
+                  config:
+                    display: Description
+                -
+                  handle: product
+                  field:
+                    mode: select
+                    create: false
+                    collections:
+                      - products
+                    type: entries
+                    display: Product
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    validate:
+                      - required
+                    max_items: 1
             timeline:
               display: Timeline
               instructions: null

@@ -1,0 +1,17 @@
+title: Testimonials
+template: default
+layout: layout
+mount: c7534530-6e6a-4ffe-9f55-32fa7bba966a
+revisions: false
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true
+structure:
+  root: false
+  max_depth: 1
