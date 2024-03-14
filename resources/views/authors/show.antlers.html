@@ -20,7 +20,7 @@
                 class="container mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8"
             >
                 <div class="flex flex-col lg:flex-row">
-                    <div class="w-full lg:w-9/12">
+                    <div class="order-last w-full lg:order-none lg:w-9/12">
                         <article
                             class="{{ settings:typography }} prose max-w-screen-lg dark:prose-invert"
                         >
@@ -28,7 +28,7 @@
                         </article>
                     </div>
                     <div
-                        class="flex w-full items-center justify-center lg:ml-8 lg:w-3/12"
+                        class="mb-8 flex w-full items-center justify-center lg:mb-0 lg:ml-8 lg:w-3/12"
                     >
                         {{ if avatar }}
                             <div class="overflow-hidden rounded-full shadow-xl">

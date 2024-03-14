@@ -533,6 +533,106 @@ fields:
                 -
                   handle: markdown
                   field: markdown.markdown
+            partners:
+              display: Partners
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: background_color
+                  field: background.background_color
+                -
+                  handle: heading_1
+                  field: heading_1.heading_1
+                -
+                  handle: description
+                  field: markdown.markdown
+                  config:
+                    display: Description
+                -
+                  handle: partners
+                  field:
+                    collapse: false
+                    previews: true
+                    fullscreen: true
+                    sets:
+                      partners:
+                        display: Partners
+                        instructions: null
+                        icon: null
+                        sets:
+                          partner:
+                            display: Partner
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                handle: logo
+                                field:
+                                  max_files: 1
+                                  mode: grid
+                                  container: assets
+                                  restrict: false
+                                  allow_uploads: true
+                                  show_filename: true
+                                  show_set_alt: true
+                                  type: assets
+                                  display: Logo
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: title
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: Title
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  validate:
+                                    - required
+                              -
+                                handle: subtitle
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: Subtitle
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: description
+                                field: markdown.markdown
+                                config:
+                                  display: Description
+                              -
+                                handle: link
+                                field:
+                                  collections:
+                                    - pages
+                                  type: link
+                                  display: Link
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                    type: replicator
+                    display: Partners
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
             people:
               display: People
               instructions: null
