@@ -15,6 +15,7 @@ return [
                                         gelesen und akzeptiere diese.',
     'contact_form_button_send' => 'Senden',
     'dark' => 'Dunkel',
+    'date' => 'Datum',
     'duration' => 'Dauer',
     'entries_count' => 'Es wurde <span class="font-medium">1</span> Eintrag gefunden. | 
                             Es wurden <span class="font-medium">:count</span>
@@ -27,6 +28,7 @@ return [
     'footer' => 'Fußzeile',
     'homepage' => 'Startseite',
     'light' => 'Hell',
+    'location' => 'Ort',
     'newest_article' => 'Dies ist der neueste Artikel.',
     'newest_video' => 'Dies ist das neueste Video.',
     'next_article' => 'nächster Artikel',
@@ -43,6 +45,7 @@ return [
     'previous_video' => 'vorheriges Video',
     'primary_navigation' => 'primäre Navigation',
     'reading_time' => 'Min. Lesezeit',
+    'registration' => 'Anmeldung',
     'related_entries' => 'Ähnliche Einträge',
     'rss_feed_title' => 'RSS-Feed von',
     'save_contact' => 'Kontakt speichern',
@@ -50,6 +53,7 @@ return [
     'system' => 'System',
     'tags' => 'Schlagwörter',
     'theme' => 'Thema',
+    'time' => 'Uhrzeit',
     'website' => 'Webseite',
 ];
 

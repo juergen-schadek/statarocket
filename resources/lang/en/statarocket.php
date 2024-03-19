@@ -15,6 +15,7 @@ return [
                                         and agree with it.',
     'contact_form_button_send' => 'Send',
     'dark' => 'Dark',
+    'date' => 'Date',
     'duration' => 'Duration',
     'error_404' => 'Error 404',
     'error_404_heading' => 'UH OH! You\'re lost.<br />Page not found!',
@@ -24,6 +25,7 @@ return [
     'footer' => 'Footer',
     'homepage' => 'Homepage',
     'light' => 'Light',
+    'location' => 'Location',
     'newest_article' => 'This is the newest article.',
     'newest_video' => 'This is the newest video.',
     'next_article' => 'Next article',
@@ -40,6 +42,7 @@ return [
     'previous_video' => 'Previous video',
     'primary_navigation' => 'Primary Navigation',
     'reading_time' => 'min. Reading time',
+    'registration' => 'Registration',
     'related_entries' => 'Related entries',
     'rss_feed_title' => 'RSS-Feed of',
     'save_contact' => 'Save contact',
@@ -47,6 +50,7 @@ return [
     'system' => 'System',
     'tags' => 'Tags',
     'theme' => 'Theme',
+    'time' => 'Time',
     'website' => 'Website',
 ];
 

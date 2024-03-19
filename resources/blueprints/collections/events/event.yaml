@@ -1,0 +1,179 @@
+title: Event
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+              display: Title
+              instructions_position: above
+              listable: true
+              visibility: visible
+              replicator_preview: true
+              input_type: text
+              antlers: false
+              hide_display: false
+          -
+            handle: location
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Location
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: excerpt
+            field: markdown.markdown
+            config:
+              display: Excerpt
+          -
+            handle: content
+            field: bard.content
+          -
+            handle: link
+            field:
+              type: link
+              display: Link
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: layout
+            field:
+              hide_partials: true
+              blueprint: false
+              type: template
+              display: Layout
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: template
+            field:
+              hide_partials: true
+              blueprint: false
+              type: template
+              display: Template
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate:
+                - required
+                - 'max:200'
+              display: Slug
+              instructions_position: above
+              listable: true
+              visibility: visible
+              replicator_preview: true
+              from: title
+              generate: true
+              show_regenerate: true
+              hide_display: false
+          -
+            handle: featured_image
+            field:
+              max_files: 1
+              mode: grid
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Featured Image'
+              listable: true
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+              display: Start
+              instructions_position: above
+              listable: true
+              visibility: visible
+              replicator_preview: true
+              mode: single
+              inline: false
+              full_width: false
+              columns: 1
+              rows: 1
+              time_enabled: true
+              time_seconds_enabled: false
+              hide_display: false
+          -
+            handle: date_end
+            field:
+              type: date
+              default: now
+              display: End
+              instructions_position: above
+              listable: true
+              visibility: visible
+              replicator_preview: true
+              mode: single
+              inline: false
+              full_width: false
+              columns: 1
+              rows: 1
+              time_enabled: true
+              time_seconds_enabled: false
+              hide_display: false
+          -
+            handle: author
+            field:
+              max_items: 1
+              mode: select
+              type: users
+              display: Author
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+  SEO:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: seo
+            field:
+              type: seo_pro
+              listable: false
+              display: SEO

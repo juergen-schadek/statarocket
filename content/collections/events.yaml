@@ -1,0 +1,16 @@
+title: Events
+template: events/show
+layout: layout
+mount: 5f246257-6cee-403e-993c-972dcd7edee4
+revisions: false
+route: '/{mount}/{slug}'
+date: true
+sort_dir: asc
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true
+inject:
+  seo:
+    description: '@seo:excerpt'

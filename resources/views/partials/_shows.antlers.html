@@ -1,0 +1,28 @@
+<article
+    class="relative flex flex-col overflow-hidden rounded-xl bg-element shadow dark:bg-dark-element"
+>
+    <div class="flex flex-col space-y-4 p-6">
+        <div class="font-accent font-bold text-primary">
+            <time datetime="{{ date format="c" }}">
+                {{ date format="d.m.Y H:i" }}
+            </time>
+        </div>
+        <h2
+            class="text-xl font-semibold text-heading dark:text-heading-inverted"
+        >
+            <a class="focus:outline-none" href="{{ url }}">
+                <span class="absolute inset-0" aria-hidden="true"></span>
+                {{ title }}
+            </a>
+        </h2>
+        <!-- prettier-ignore -->
+        <div>
+            <span class="text-sm font-medium leading-6 text-text-muted">{{ trans:statarocket.location }}:</span> {{ location }}
+        </div>
+        <div
+            class="{{ settings:typography }} prose max-w-2xl dark:prose-invert"
+        >
+            {{ excerpt }}
+        </div>
+    </div>
+</article>

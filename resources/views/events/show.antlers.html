@@ -1,0 +1,73 @@
+{{ partial:header }}
+<main class="py-16">
+    <div class="container mx-auto max-w-screen-xl px-4 pb-4 sm:px-6 lg:px-8">
+        <h1
+            class="mb-6 text-3xl font-extrabold tracking-tight text-heading dark:text-heading-inverted sm:text-4xl lg:text-5xl"
+        >
+            {{ title }}
+        </h1>
+        <div class="flex">
+            <hr class="mb-4 w-24 border-t-4 border-primary" />
+        </div>
+        {{ partial:breadcrumbs }}
+    </div>
+    <div class="container mx-auto max-w-screen-xl px-4 pb-16 sm:px-6 lg:px-8">
+        <dl
+            class="mb-8 grid grid-cols-1 gap-px bg-gray-900/5 shadow sm:grid-cols-2 lg:grid-cols-4"
+        >
+            <div
+                class="flex flex-col items-baseline justify-between gap-y-2 bg-element px-4 py-10 dark:bg-dark-element sm:px-6 xl:px-8"
+            >
+                <!-- prettier-ignore -->
+                <dt class="text-sm font-medium leading-6 text-text-muted">
+                    {{ trans:statarocket.date }}:
+                </dt>
+                <dd>
+                    <time datetime="{{ date format="c" }}">
+                        {{ date format="d.m.Y" }}
+                    </time>
+                </dd>
+            </div>
+            <div
+                class="flex flex-col items-baseline justify-between gap-y-2 bg-element px-4 py-10 dark:bg-dark-element sm:px-6 xl:px-8"
+            >
+                <!-- prettier-ignore -->
+                <dt class="text-sm font-medium leading-6 text-text-muted">
+                    {{ trans:statarocket.time }}:
+                </dt>
+                <dd>
+                    <time datetime="{{ date format="c" }}">
+                        {{ date format="H:i" }}
+                    </time>
+                    -
+                    <time datetime="{{ date_end format="c" }}">
+                        {{ date_end format="H:i" }}
+                    </time>
+                </dd>
+            </div>
+            <div
+                class="col-span-2 flex flex-col items-baseline justify-between gap-y-2 bg-element px-4 py-10 dark:bg-dark-element sm:px-6 xl:px-8"
+            >
+                <!-- prettier-ignore -->
+                <dt class="text-sm font-medium leading-6 text-text-muted">
+                    {{ trans:statarocket.location }}:
+                </dt>
+                <dd>
+                    {{ location }}
+                </dd>
+            </div>
+        </dl>
+        {{ partial:bard_field class="py-8" }}
+        {{ if link }}
+            <a
+                class="inline-flex items-center justify-center rounded-md bg-primary px-4 py-3 font-semibold text-heading-inverted shadow-sm hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                href="{{ link }}"
+                target="_blank"
+            >
+                {{ trans:statarocket.registration }}
+            </a>
+        {{ /if }}
+    </div>
+    {{ partial:contact_form }}
+</main>
+{{ partial:footer }}
