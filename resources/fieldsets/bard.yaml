@@ -481,6 +481,41 @@ fields:
                     visibility: visible
                     replicator_preview: true
                     hide_display: false
+            logo_cloud:
+              display: 'Logo Cloud'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: background_color
+                  field: background.background_color
+                -
+                  handle: heading_1
+                  field: heading_1.heading_1
+                -
+                  handle: description
+                  field: markdown.markdown
+                  config:
+                    display: Description
+                -
+                  handle: logos
+                  field:
+                    min_files: 1
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: Logos
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    validate:
+                      - required
             markdown:
               display: Markdown
               instructions: null
