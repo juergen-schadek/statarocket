@@ -15,4 +15,4 @@ export_paths:
   - package.json
   - tailwind.config.js
 dependencies:
-  statamic/seo-pro: ^5.4
+  statamic/seo-pro: ^6.0
