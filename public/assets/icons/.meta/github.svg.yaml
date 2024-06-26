@@ -1,8 +1,6 @@
-data:
-  alt: GitHub
-  icon_color: 'fill-[#181717]'
+data: {  }
 size: 822
-last_modified: 1694500280
+last_modified: 1715710311
 width: '24'
 height: '24'
 mime_type: image/svg+xml

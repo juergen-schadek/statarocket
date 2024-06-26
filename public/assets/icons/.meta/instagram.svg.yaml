@@ -1,8 +1,6 @@
-data:
-  alt: Instagram
-  icon_color: 'fill-[#E4405F]'
+data: {  }
 size: 1808
-last_modified: 1694500284
+last_modified: 1715710311
 width: '24'
 height: '24'
 mime_type: image/svg+xml

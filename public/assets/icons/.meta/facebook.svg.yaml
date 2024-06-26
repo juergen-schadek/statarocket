@@ -1,8 +1,6 @@
-data:
-  alt: Facebook
-  icon_color: 'fill-[#1877F2]'
+data: {  }
 size: 398
-last_modified: 1694500285
+last_modified: 1715710311
 width: '24'
 height: '24'
 mime_type: image/svg+xml

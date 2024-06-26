@@ -1,8 +1,6 @@
-data:
-  alt: 'Google Podcasts'
-  icon_color: 'fill-[#4285F4]'
+data: {  }
 size: 848
-last_modified: 1707987955
+last_modified: 1715710311
 width: '24'
 height: '24'
 mime_type: image/svg+xml
